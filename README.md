@@ -35,11 +35,8 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
 1. Primeiros passos
     - [Sobre o node](./contents/1-primeiros-passos/sobre.md)
     - [Instalação](./contents/1-primeiros-passos/instalacao.md)
-        * [Testando o console]()
     - [NPM](./contents/1-primeiros-passos/npm.md)
     - Configurações iniciais
-        * [Eslint]()
-        * [Babel]()
 2. Arquitetura Básica
     - [Express]()
     - [HTTP]()
@@ -53,15 +50,15 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
     - [Controllers]()
     - [Services]()
 3. Database
-    - [Mongoose]
-    - [Models]
+    - [Mongoose]()
+    - [Models]()
 3. Testing
-    - [Jest]
+    - [Jest]()
 4. Auth
-    - [JWT]
+    - [JWT]()
     - [Password middleware]()
-    - [Login]
-    - [Guards]
+    - [Login]()
+    - [Guards]()
 4. Assincronismo
     - [Event loop]()
     - [Operações bloqueantes]()

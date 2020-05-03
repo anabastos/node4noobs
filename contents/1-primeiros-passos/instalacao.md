@@ -45,3 +45,21 @@ Para usar a ultima versão instalada rode:
 `nvm use node`
 
 O NVM é uma ferramenta muito utilizada pois você pode instalar ou usar versões diferentes de node rodando comandos com o `nvm install <alguma-versão-especifica>` e `nvm use node <alguma-versão-especifica>`.
+
+### 1.4 Testando a instalação
+
+Podemos testar a instalação rodando no nosso terminal `node` em que temos uma interface para rodar comandos javascript.
+
+Nessa interface podemos por exemplo, criar variáveis e checar o valor delas.
+```bash
+> var x = 10
+undefined
+> x
+10
+```
+
+Digitamos **.exit** para fecha-la.
+
+```bash
+> .exit
+```
