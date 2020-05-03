@@ -21,19 +21,27 @@ O `Path Intellisense` nos ajuda com autocomplete de modulos. Faremos uso e expli
 ### 1.3 Baixar o NVM
 Baixe a ultima versão do Node.js pelo próprio site, mas vamos usar uma ferramenta mais avançada para lidar com o versionamento do Node chamado NVM(_Node Version Manager_) independente de sistema operacional. Ele permite que você instale a atualize sua versão por meio de simples comandos no terminal.
 
-Para baixar basta rodar o seguinte comando via cURL ou wget:
+Para baixar basta rodar o seguinte comando via _cURL_ ou _wget_:
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
+
+
 `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
 
 E depois rodar este comando para exportar o conteúdo que foi instalado globalmente.
+
+
 `export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm`
 
 #### 1.3.1 Instalar a ultima versão do Node.js
 
 Para baixar, compilar e instalar a ultima versão do node, rode este comando:
+
+
 `nvm install node # "node" é um alias para a ultima versão`
 
 Para usar a ultima versão instalada rode:
+
+
 `nvm use node`
 
-O NVM é uma ferramenta muito utilizada pois você pode instalar ou usar versões diferentes de node rodando comandos como o `nvm install <alguma-versão-especifica>` e `nvm use node <alguma-versão-especifica>`.
+O NVM é uma ferramenta muito utilizada pois você pode instalar ou usar versões diferentes de node rodando comandos com o `nvm install <alguma-versão-especifica>` e `nvm use node <alguma-versão-especifica>`.
