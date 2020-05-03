@@ -22,6 +22,7 @@ O `Path Intellisense` nos ajuda com autocomplete de modulos. Faremos uso e expli
 Baixe a ultima versão do Node.js pelo próprio site, mas vamos usar uma ferramenta mais avançada para lidar com o versionamento do Node chamado NVM(_Node Version Manager_) independente de sistema operacional. Ele permite que você instale a atualize sua versão por meio de simples comandos no terminal.
 
 Para baixar basta rodar o seguinte comando via _cURL_ ou _wget_:
+
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
 
 
