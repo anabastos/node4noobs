@@ -1,6 +1,6 @@
 ## 2. Começando o projeto pela NPM
 
-O NPM(_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
+O **NPM**(_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
 
 ### 2.1 Primeiros Passos
 
@@ -16,26 +16,32 @@ npm init
 ```
 
 Esse comando vai pedir que você preencha os dados obrigatórios do projeto.
-O *nome* é um simples texto com o nome curto do projeto.
-As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependencias.
-Mas por agora podemos preencher o campo *versão* apenas com o 1.0.0 conforme o sugerido.
-A *descrição* também é uma string que mostra pro usuário uma breve descrição do projeto
-O *entry point* vamos manter o `index.js`
-E podemos pular o apertando enter também no *test command* e o *git repository*.
-*keywords* são as palavras-chaves sobre o que seu projeto faz, podemos colocar coisas como "node" ou "he4rtdevs" separadas por virgula.
-O campo *author* especifica o criador do projeto. Ele consiste em uma string ou um objeto com contatos ou outras informações. Geralmente uma string com seu nome já supre!
-A *licensa* é um campo extremamente importante para informar os usuários sobre como você pretende regulamentar seu projeto. Não é um campo obrigatório mas é sempre uma boa ideia falar explicitamente o que usuários podem ou não fazer.
+
+O **nome** é um simples texto com o nome curto do projeto.
+Por agora vamos preencher o campo **versão** apenas com o 1.0.0 conforme o sugerido.
+
+A **descrição** também é uma string que mostra pro usuário uma breve descrição do projeto
+
+O **entry point** vamos manter o `index.js`
+E podemos pular o apertando enter também no **test command** e o **git repository**.
+
+**keywords** são as palavras-chaves sobre o que seu projeto faz, podemos colocar coisas como "node" ou "he4rtdevs" separadas por virgula.
+
+O campo **author** especifica o criador do projeto. Ele consiste em uma string ou um objeto com contatos ou outras informações. Geralmente uma string com seu nome já supre!
+
+A **licensa** é um campo extremamente importante para informar os usuários sobre como você pretende regulamentar seu projeto. Não é um campo obrigatório mas é sempre uma boa ideia falar explicitamente o que usuários podem ou não fazer.
 É muito importante se informar sobre as licensas existentes mas por agora recomendo usar a *MIT* que é uma licença permissiva utilizada tanto em software livre quanto em software proprietário.
 
-Campos como *keywords* ou *descrição* são principalmente importantes caso você planeja publicar seu projeto na npm para que outras pessoas que podem usar ou manter achem seu projeto facildade.
+Campos como **keywords** ou **descrição** são principalmente importantes caso você planeja publicar seu projeto na npm para que outras pessoas que podem usar ou manter achem seu projeto facildade.
 
-Após preencher os campos basta digitar *YES* confirmando o conteúdo que sera seu `package.json`!
+Após preencher os campos basta digitar **YES** confirmando o conteúdo que sera seu `package.json`!
 
 <p align="center">
-  <a><img src="../../assets/1-primeiros-passos/npminit.png" alt="Logo"></a>
+  <a><img width="500" src="../../assets/1-primeiros-passos/npminit.png" alt="Logo"></a>
 </p>
 
 Quando começamos um projeto, a npm gera um arquivo `package.json`. Este arquivo é o centro do projeto Node.js. Ele consiste em um arquivo _JSON_, ou seja, um _Objeto Javascript_, onde a informação é salva em pares de chave-valor.
+
 Lembrando que as chaves devem estar em volta de aspas duplas (") e todos os campos devem estar separados com uma virgula (,).
 Ele guarda todas as informações de projetos com nome, versão, e diversas informações.
 
@@ -55,17 +61,19 @@ Lembrando que o `npm` acima de tudo é um gerenciador de dependências do projet
 E o `package.json` tem o papel de listar os pacotes e dependências do projeto.
 
 Podemos adicionar uma dependencia pelo comando:
-``
+
+```bash
 npm install express
 ```
 
 Express no caso é o framework mais comum para o desenvolvimento de API's node que nos provê todo o ferramental para desenvolver nossa aplicação.
 
 Quando estamos desenvolvendo um servidor node, muitas vezes pecisamos rodar, modificar um arquivo, parar o servidor e rodar novamente para ver as mudanças.
+
 Para isso vamos instalar o `nodemon`, que é uma ferramenta para podermos rodarmos o projeto com auto-reload, ou seja, o servidor node restarta assim que mexemos com o arquivo tornando nosso desenvolvimento mais produtivo.
 Pelo `nodemon` ser uma ferramenta de desenvolvimento geralmente instalamos com o `--save-dev`.
 
-``
+```
 npm install --save-dev nodemon
 ```
 
@@ -80,7 +88,24 @@ Se checarmos nosso `package.json` vemos que agora as dependências do pacote est
   }
 ```
 
-Os pacotes vem com o número de sua versão seguindo o SemVer, dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
+Como podemos remover esses pacotes se não queremos mais eles? Apenas removemos a chave-valor do `package.json`!
+Só tome cuidado para tirar todas as referências dentro do código dessas dependências.
+
+Agora no nosso projeto também temos um arquivo chamado `package-lock.json` que serve para garantir uma instalação consistênte das dependências, nunca mexemos nele pois ele é gerado, e uma pasta `node_modules`.
+Todos os pacotes são salvos na pasta `node_modules`. Por ser uma pasta com arquivos muito grandes geralmente o colocamos dentro de um arquivo `.gitignore` em nosso projeto para que não publiquemos acidentalmente por exemplo, no github.
+
+```
+// .gitignore
+
+node_modules/
+```
+
+Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando
+`npm i`
+
+#### 2.2.1 Versionamento de pacotes
+
+As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependencias. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
 
 ```javascript
   "package": "MAJOR.MINOR.PATCH"
@@ -107,22 +132,7 @@ Para permitir releases PATCH e MINOR usamos o chapeu (^). Permitindo updates em 
 }
 ```
 
-Como podemos remover esses pacotes se não queremos mais eles? Apenas removemos a chave-valor do `package.json`!
-Só tome cuidado para tirar todas as referências dentro do código dessas dependências.
-
-Agora no nosso projeto também temos um arquivo chamado `package-lock.json` que serve para garantir uma instalação consistênte das dependências, nunca mexemos nele pois ele é gerado, e uma pasta `node_modules`.
-Todos os pacotes são salvos na pasta `node_modules`. Por ser uma pasta com arquivos muito grandes geralmente o colocamos dentro de um arquivo `.gitignore` em nosso projeto para que não publiquemos acidentalmente por exemplo, no github.
-
-```
-// .gitignore
-
-node_modules/
-```
-
-Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando
-`npm i`
-
-### 2.3 Scripts
+### 2.2.3 Rodando o arquivo raiz com nodemon por meio de scripts
 
 Note que temos o campo `scripts` no nosso arquivo, esse scripts é um meio de automatizar tarefas repetitivas.
 Geralmente criamos scripts para iniciar o servidor, rodar testes, ou rodar geradores de código.
@@ -141,7 +151,7 @@ Agora se rodarmos `npm run start` veremos o log `He4rtDevs!!`.
 Se alterarmos o conteúdo do log para `He4rtDevs!!!!!!!!` automaticamente nosso veremos o novo log no terminal!
 
 <p align="center">
-  <a><img src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>
+  <a><img width=400" src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>
 </p>
 
 ### 2.4 Instalando dependências globais
