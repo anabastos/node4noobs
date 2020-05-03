@@ -29,7 +29,7 @@ Entendimento básico de linha de comando e javascript. Você pode ver outros 4no
 
 ### O que é Node.js?
 Node.js não é uma linguagem ou um framework mas sim é um ecossistema cross-platform para rodar Javascript gratuito e open source.
-Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em navegadores como também para fazer Javascript server-side, mas atualmente é uma ferramenta assêncial full-stack, ou seja, é usado para desenvolver aplicações front-end e back-end. 
+Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em navegadores como também para fazer Javascript server-side, mas atualmente é uma ferramenta essencial full-stack, ou seja, é usado para desenvolver aplicações front-end e back-end. 
 
 ## Conteúdos
 1. Primeiros passos
