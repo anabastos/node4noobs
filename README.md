@@ -18,7 +18,7 @@
   <br />
   <a href="https://github.com/anabastos/node4noobs/issues">Issues</a>
   <br />
-</p>https://github.com/ThiagoDellaNoce/javascript4noobs
+</p>
 
 ## Introdução
 O tutorial do Node4noobs tem o objetivo de ensinar sobre o funcionamento do ecossistema Node.js e trabalhar na criação de um projeto passo-a-passo do zero até a estrutura de uma API madura com autenticação e testes automatizados fazendo uso das ferramentas mais atuais.

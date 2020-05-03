@@ -7,7 +7,7 @@ Para o setup inicial somente é necessário ter instalado os binários do Node.J
 Os editores mais simples e mais leves geralmente usados no desenvolvimento Javascript são o Atom ou VisualStudio. Esse tutorial utilizaremos o VSCode, mas qualquer outro editor pode ter as mesmas funcionalidades.
 
 <p align="center">
-  <a><img src="../../assets/1-primeiros-passos/vscode-extensions.jpeg" alt="Logo"></a>
+  <a><img src="../../assets/1-primeiros-passos/vscode-extensions.png" alt="Logo"></a>
 </p>
 
 Para isso na parte de `extensions marketplace` vamos instalar as seguintes extensões:
@@ -35,7 +35,5 @@ Para baixar, compilar e instalar a ultima versão do node, rode este comando:
 
 Para usar a ultima versão instalada rode:
 `nvm use node`
-
-----
 
 O NVM é uma ferramenta muito utilizada pois você pode instalar ou usar versões diferentes de node rodando comandos como o `nvm install <alguma-versão-especifica>` e `nvm use node <alguma-versão-especifica>`.
