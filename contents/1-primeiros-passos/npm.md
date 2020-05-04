@@ -135,8 +135,10 @@ Para permitir releases PATCH e MINOR usamos o chapeu (^). Permitindo updates em 
 ### 2.2.3 Rodando o arquivo raiz com nodemon por meio de scripts
 
 Note que temos o campo `scripts` no nosso arquivo, esse scripts é um meio de automatizar tarefas repetitivas.
+
 Geralmente criamos scripts para iniciar o servidor, rodar testes, ou rodar geradores de código.
 O conteúdo de um `script` consiste em um simples comando de terminal portanto podemos automatizar o comando `node index.js` que acamos de rodar.
+
 Após um tempo rodar o arquivo raiz do nosso projeto vai se tornar cada vez mais longo complexo dependendo da nossa configuração, para isso vamos criar o comando `start` que roda o arquivo raiz do nosso projeto chamando a dependência que acabamos de instalar , o `nodemon`.
 ```
 ...
@@ -148,7 +150,7 @@ Após um tempo rodar o arquivo raiz do nosso projeto vai se tornar cada vez mais
 
 Agora se rodarmos `npm run start` veremos o log `He4rtDevs!!`.
 
-Se alterarmos o conteúdo do log para `He4rtDevs!!!!!!!!` automaticamente nosso veremos o novo log no terminal!
+Se alterarmos o conteúdo do nosso `index.js` para `console.log('He4rtDevs!!!!!!!!')` automaticamente nosso veremos o novo log `He4rtDevs!!!!!!!!` no terminal.
 
 <p align="center">
   <a><img width=400" src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>

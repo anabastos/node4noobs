@@ -36,7 +36,7 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
     - [Sobre o node](./contents/1-primeiros-passos/sobre.md)
     - [Instalação](./contents/1-primeiros-passos/instalacao.md)
     - [NPM](./contents/1-primeiros-passos/npm.md)
-    - Configurações iniciais
+    - [Configurações iniciais](./contents/1-primeiros-passos/config.md)
 2. Arquitetura Básica
     - [Express]()
     - [HTTP]()
