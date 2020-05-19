@@ -4,11 +4,11 @@ O **Express** é um micro framework para gerenciamento de rotas, para entender c
 
 ### 4.1 Hello World
 
-Primeiramente use os conhecimentos adiquiridos na seção anterior para criar um projeto vazio com o npm. Caso não tenha lido a seção anterior [clique aqui](../1-primeiros-passos/npm.md).
+Primeiramente use os conhecimentos adquiridos na seção anterior para criar um projeto vazio com o npm. Caso não tenha lido a seção anterior [clique aqui](../1-primeiros-passos/npm.md).
 
 Agora com o nosso projeto criado vamos instalar o express rodando o comando `npm i express` no diretório do nosso projeto, na sequência abra seu editor de código e vamos começar a codar :)
 
-Dentro do nosso index.js vamo importar e instanciar o express
+Dentro do nosso index.js vamos importar e instanciar o express
 
 ```javascript
   const express = require('express');
