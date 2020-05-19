@@ -81,6 +81,12 @@ Para contribuir com esse projeto maravilhoso, você:
 
 E tchadam! Tá pronto o sorvetinho ✨
 
+## Contribuidores
+
+<a href="https://github.com/anabastos"><img src="https://avatars3.githubusercontent.com/u/10088900" title="anabastos" width="72" height="72"></a>
+<a href="https://github.com/PoorlyDefinedBehaviour"><img src="https://avatars0.githubusercontent.com/u/17282221" title="PoorlyDefinedBehaviour" width="72" height="72"></a>
+<a href="https://github.com/hugogomess"><img src="https://avatars3.githubusercontent.com/u/30708062" title="hugogomess" width="72" height="72"></a>
+
 ## Autores
 
 - **Ana Luiza Portello Bastos (anabastos)** - _Software Engineer & Member of He4rt Developers_ [Twitter](https://twitter.com/naluhh)
