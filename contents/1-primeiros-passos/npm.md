@@ -66,6 +66,12 @@ Podemos adicionar uma dependencia pelo comando:
 npm install express
 ```
 
+ou a forma abreviada
+
+```bash
+npm i express
+```
+
 Express no caso é o framework mais comum para o desenvolvimento de API's node que nos provê todo o ferramental para desenvolver nossa aplicação.
 
 Quando estamos desenvolvendo um servidor node, muitas vezes pecisamos rodar, modificar um arquivo, parar o servidor e rodar novamente para ver as mudanças.
@@ -155,6 +161,14 @@ Se alterarmos o conteúdo do nosso `index.js` para `console.log('He4rtDevs!!!!!!
 <p align="center">
   <a><img width=400" src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>
 </p>
+
+### 2.3 Importando modulos
+
+TODO 
+
+### 2.3 Importando dependências
+
+TODO
 
 ### 2.4 Instalando dependências globais
 

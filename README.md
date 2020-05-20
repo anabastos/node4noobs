@@ -39,8 +39,8 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
     - [Configurações iniciais](./contents/1-primeiros-passos/config.md)
 2. Arquitetura Básica
     - [Express](./contents/2-arquitetura-basica/express.md)
-    - [HTTP]()
-    - [Rotas]()
+    - [HTTP](./contents/2-arquitetura-basica/http.md)
+    - [Rotas](./contents/2-arquitetura-basica/rotas.md)
         * [Criando uma rota GET]()
         * [Criando uma rota com parametros]()
         * [Criando uma rota POST]()
