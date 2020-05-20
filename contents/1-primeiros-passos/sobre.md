@@ -19,8 +19,7 @@ Com isso além da melhora em performance e eficiencia das aplicações podemos f
 O Node.js trabalha com um modelo Event-based que é basicamente detectar eventos e lidar com eles, nos capitulos posteriores vamos chegar em como podemos lidar com eventos e assincronismo com Promises.
 
 A primeira apresentação sobre o que era Node.js foi na JSConf de 2009 pelo seu criador Ryan Dahl. Um momento incrível para a história do Javascript!
-[![JSConf Node.js](https://yt-embed.herokuapp.com/embed?v=ztspvPYybIY)](https://youtu.be/ztspvPYybIY
- "JSConf Node.js")
+[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/ztspvPYybIY)
 
 Node.js é cross-platform, ou seja, um desenvolvedor Node pode criar aplicações desktop para Windows, Linux e Mac. Além disso não se limita a desktop, como também pode ser usado para mobile e desenvolvimento web. Se tornando então uma linguagem de uso geral, com aplicações também em cloud e soluções IoT.
 
