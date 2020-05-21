@@ -1,5 +1,5 @@
 
-### 6. Definindo rotas
+### 7. Definindo rotas
 
 Para aplicações back-end geralmente queremos um servidor HTTP. Esse servidor precisa responder a requests dependendo do URL que é pedido.
 
@@ -23,17 +23,17 @@ app.get('/', (req, res) => {
 
 No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHOD, o tipo do metodo HTTP, ROTA o caminho da URL da requisição e HANDLER a função que lida com a requisição e define a resposta que vamos enviar ao cliente.
 
-### 6.1 Testando rotas
+### 7.1 Testando rotas
 
 Porém quando queremos testar requisições de forma efetiva geralmente usamos uma ferramenta chamada Amnesia.
 
 TODO -> Como usar o amnesia para bater em rotas
 
-### 6.2 CRUD
+### 7.2 CRUD
 
 O que é uma aplicação CRUD?
 
-### 6.2.1 Criando rotas GET
+### 7.2.1 Criando rotas GET
 
 No nosso exemplo de código fizemos:
 
@@ -49,9 +49,9 @@ Note que essa função recebe dois argumentos, `req` e `res`. `req` no caso é u
 
 Com esse pedaço de código estamos falando para a instância express: "Caso recebamos uma requisição `GET`, na rota '/', responda com a string `"Hello World"`.
 
-### 6.2.2 Criando rotas GET parametrizaveis.
+### 7.2.2 Criando rotas GET parametrizaveis.
 
-### 6.2.3 Criando rotas POST
+### 7.2.3 Criando rotas POST
 
 Agora vamos criar uma requisição de POST.  
 ```javascript
@@ -62,7 +62,7 @@ app.post('/', (req, res) => {
 
 TODO como pegar coisas do corpo
 
-### 6.2.4 Criando rotas PUT
+### 7.2.4 Criando rotas PUT
 
 ```javascript
 app.post('/user', (req, res) => {
@@ -70,7 +70,7 @@ app.post('/user', (req, res) => {
   });
 ```
 
-### 6.2.5 Criando rotas DELETE
+### 7.2.5 Criando rotas DELETE
 
 ```javascript
 app.post('/user', (req, res) => {

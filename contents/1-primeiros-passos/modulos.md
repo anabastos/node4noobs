@@ -1,0 +1,154 @@
+### 3. Modulos NPM
+
+No capitulo anterior a titulo de exempo importamos o pacote npm chamado `express`. Mas o que são pacotes?
+Pacotes são pedaços de código que estão cadastrados na npm, que quando queremos usar em nosso projeto podemos importa-los. Esse pedaço de código chamamos de modulos, e eles ficam guardado dentro da pasta `node_modules`.
+
+Podemos importar esses pedaços de código pelo `import` do proprio Node.js.
+
+#### 3.1 Importando pacotes
+
+Vamos a um exemplo, abra o terminal e importe o pacote chamado `node-color-log`, que serve para que possamos dar `console.log` com cores, com o comando `npm i node-color-log`.
+
+Pode parecer um pacote desnecessário mas geralmente diferenciamos quais logs da nossa aplicação são erros ou avisos por meio de cores.
+
+Logs são de extrema importancia em uma aplicação madura pois temos controle sobre qualquer erro e é nosso papel como desenvolvedor back-end fazer com que eles exponham tudo o que está acontecendo no nosso servidor e sejam mais legível possível para que possamos debuggar possíveis erros.
+
+Agora em nosso index.js utilize a função o `import` passando o nome do pacote, `node-color-log`, para que possamos colocar o conteúdo desse módulo dentro de uma variável.
+
+```javascript
+import logger from 'node-color-log'
+```
+
+agora ao invés do `console.log` nativo podemos usar um log mais completo.
+
+```javascript
+// index.js
+
+import logger from 'node-color-log'
+
+logger.info("He4rtDevs!!");
+```
+
+Agora se rodarmos `npm run start` vemos um log muito mais completo que inclui horário, o tipo do log e a mensagem!
+
+`2018-08-14T18:23:09.838Z [INFO] This is info mode`
+
+Estamos usamos o log apenas um exemplo sobre como podemos importar pacotes npm!
+Mas nos próximos capítulos vamos usa-lo de forma mais extensa principalmente para expor possíveis erros.
+
+#### 3.2 Importando modulos
+
+Ok, podemos importar modulos já criados no npm, mas como posso no meu proprio projeto importar os arquivos que eu mesmo crio?
+
+Para isso vamos criar um arquivo chamado `data.js`. Nele vamos apenas adicionar um objeto javascript com dados de um usuário **inventado** para nosso sistema.
+
+```javascript
+// data.js
+
+const example = {
+  name: "Maria das Graças",
+  email: "mariagraca@gmail.com",
+  senha: "1234",
+}
+const users = [example]
+
+export default { users }
+```
+
+Para expor o meu objeto `users` para o resto do meu projeto node preciso usar o `export default` em frente ao users. Em que falamos que o objeto contendo os usuários serão o conteúdo exportado do arquivo.
+
+Agora voltando ao meu arquivo `index.js` eu posso importar o arquivo que eu criamos simplesmente chamando esse novo import pelo caminho dele dentro do projeto `./data`.
+
+```javascript
+// index.js
+
+import logger from 'node-color-log'
+
+import data from './data';
+
+logger.info("He4rtDevs!!");
+logger.info(data.users);
+```
+
+Agora se vermos o terminal conseguimos passar os dados de outro arquivo para nosso index.js com sucesso!
+
+#### 3.3 Diferentes de imports e exports
+
+Dentro desse mesmo arquivo `data.js` exporte uma outra variável aleatória com qualquer conteúdo.
+
+``` javascript
+// data.js
+
+const example = {
+  name: "Maria das Graças",
+  email: "mariagraca@gmail.com",
+  senha: "1234",
+}
+const users = [example]
+
+const x = 'batata'
+
+export default x
+
+export default { users }
+```
+
+Temos um erro! Mas porquê? O `export default` fala que esse conteúdo é o padrão ou 'default' a ser exportado por esse arquivo. E o node não sabe decidir qual é o padrão mesmo.
+
+Para isso podemos apenas usar o `export` nessa váriavel.
+
+```javascript
+export x;
+
+export default { users };
+```
+
+Se queremos importar o valor x, podemos usar esse sintaxe em que colocar entre chaves, isso faz com que a gente descontrua o modulo `data` e pegue apenas o `x`
+
+```javascript
+import { x } from './data';
+```
+
+Poderiamos também usar essa sintaxe, que fala que estamos importando tudo que pode ser exportado de `exemplo` e chamando de data
+
+```javascript
+import * as data from './data';
+
+data.x // "batata"
+```
+
+Não existe melhor forma, depende de cada projeto e da forma como vamos planejar nossos arquivos. Por isso vamos voltar nosso `index.js` como a forma anterior e remover a variável x de nosso `data.js`
+
+```javascript
+// index.js
+
+import logger from 'node-color-log'
+
+import data from './data';
+
+logger.info("He4rtDevs!!");
+logger.info(data.users);
+```
+
+```javascript
+// data.js
+
+const example = {
+  name: "Maria das Graças",
+  email: "mariagraca@gmail.com",
+  senha: "1234",
+}
+const users = [example]
+
+export default { users }
+```
+
+#### 3.4 Instalando dependências globais
+
+Instalar globalmente uma dependência significa instalar um modulo não no seu projeto, mas sim no seu computador!
+
+Para instalar globalmente colocamos -g no comando de install do npm, como por exemplo `npm install -g yarn`
+
+Assim o comando yarn está disponível nosso computador globalmente. Então por exemplo, se rodarmos `yarn help` já vemos que o yarn foi de fato instalado na nossa maquina!
+
+`yarn` é uma opção para gerenciar projetos `npm` mas não vamos abordar nesse curso.

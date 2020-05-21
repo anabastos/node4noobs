@@ -162,19 +162,4 @@ Se alterarmos o conteúdo do nosso `index.js` para `console.log('He4rtDevs!!!!!!
   <a><img width=400" src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>
 </p>
 
-### 2.3 Importando modulos
 
-TODO 
-
-### 2.3 Importando dependências
-
-TODO
-
-### 2.4 Instalando dependências globais
-
-Instalar pacotes para um projeto específico ou globais, que são ferramentas que podemos usar no nosso terminal de comando.
-
-Para instalar globalmente colocamos -g no comando, como por exemplo `npm install -g yarn`
-
-Assim o comando yarn está disponível nosso computador globalmente.
-`Yarn` é uma opção para gerenciar projetos `npm` mas não vamos abordar nesse curso.
