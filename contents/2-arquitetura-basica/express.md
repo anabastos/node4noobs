@@ -1,8 +1,8 @@
-## 5. Express
+## 6. Express
 
 O **Express** é um micro framework para gerenciamento de rotas, para entender como ele funciona iremos fazer um hello world.
 
-### 5.1 Hello World
+### 6.1 Hello World
 
 Primeiramente use os conhecimentos adquiridos na seção anterior para criar um projeto vazio com o npm. Caso não tenha lido a seção anterior [clique aqui](../1-primeiros-passos/npm.md).
 
@@ -31,7 +31,7 @@ Agora iremos criar nossa primeira rota, ela será do tipo GET em / e irá retorn
   });
 ```
 
-Por último iremos fazer com que a aplicação escute na porta que definimos anteriormente
+Por último iremos fazer com que a aplicação escute na porta que definimos anteriormente.
 
 ```javascript
   app.listen(port, () => {

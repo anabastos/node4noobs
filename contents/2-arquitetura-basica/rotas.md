@@ -1,7 +1,7 @@
 
 ### 7. Definindo rotas
 
-Para aplicações back-end geralmente queremos um servidor HTTP. Esse servidor precisa responder a requests dependendo do URL que é pedido.
+Vimos como fazer um servidor HTTP para nossa aplicação back-end. Esse servidor precisa responder a requests dependendo do URL que é pedido.
 
 Por exemplo, imaginando que tenho um back-end que serve um simples Blog. Se quero posts de uma rede social imagino é esperado que no URI "servidor.com.br/posts" me retorne o conteúdo dos posts e que o URI "servidor.com.br/categories" possa me retornar as categorias dos posts do meu blog.
 
@@ -25,7 +25,25 @@ No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHO
 
 ### 7.1 Testando rotas
 
-Porém quando queremos testar requisições de forma efetiva geralmente usamos uma ferramenta chamada Amnesia.
+Testamos nossa primeira rota usando o navegador para fazer uma requisição `GET`
+Caso você esteja usando um Mac ou Linux, com o servidor rodando podemos também usar o `curl` para testar uma requisição pro nosso servidor. Basta rodar o seguinte comando:
+``` bash
+curl -i http://localhost:5000
+```
+
+Que vemos a seguinte resposta
+
+```
+HTTP/1.1 200 OK 
+Content-Type: text/plain 
+Date: Tue, 8 Sep 2015 03:05:08 GMT 
+Connection: keep-alive 
+Hello World!
+```
+
+Mostrando que tivemos um status 200 OK e o conteúdo!
+
+Porém quando queremos testar requisições de forma efetiva e simples geralmente usamos uma ferramenta chamada Amnesia.
 
 TODO -> Como usar o amnesia para bater em rotas
 
@@ -53,10 +71,21 @@ Com esse pedaço de código estamos falando para a instância express: "Caso rec
 
 ### 7.2.3 Criando rotas POST
 
+Para lidar com requisições POST precisamos instalar o modulo middleware chamado `body-parser`.
+O que ele faz é parsear conteúdo enviado dentro da requisição POST em algo usável no javascript.
+
+Instale-o com o comando `npm install body-parser --save` e importe-o no topo do nosso arquivo.
+Com a função `app.use` definimos um middleware pra nossa aplicação, que cria um objeto `body` dentro de nossa requisição com o conteúdo que foi enviado.
+
 Agora vamos criar uma requisição de POST.  
 ```javascript
-app.post('/', (req, res) => {
-    res.send('Hello World!');
+import bodyParser from 'body-parser'
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.post('/user', (req, res) => {
+    const data = req.body
+    res.send(`${data.name} Submitted Successfully!`);
   });
 ```
 
