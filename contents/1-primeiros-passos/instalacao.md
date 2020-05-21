@@ -59,8 +59,31 @@ undefined
 10
 ```
 
-Digitamos **.exit** para fecha-la.
+### 1.5 Basicos Node.js
+
+Node.js suporta Javascript, então a sua sintaxe é similar ao Javascript que roda no navegador. Portanto se formos checar...
 
 ```bash
-> .exit
+> typeof 10
+String
+> typeof 10
+Number
+> typeof true
+Boolean
+> typeof undefined
+undefined
 ```
+
+Temos os mesmos tipos primitivos do Javascript!
+Mas diferente do Javascript que roda no navegador o Node.js tem um tipo novo chamado `Buffer` que guarda dados binários, vamos usa-lo mais a frente no curso!
+
+Para fazer comandos de multiplas linhas no console basta apertar **enter**, o console irá mostrar três pontos **(...)**, significando que você pode continuar na proxima linha.
+
+```bash
+> const obj = {
+... x: 10
+... }
+undefined
+```
+
+Apertamos `crtl + c` para terminar um comando e `crtl + d` para fechar o console.

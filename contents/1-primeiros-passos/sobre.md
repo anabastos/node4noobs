@@ -11,8 +11,8 @@ JS era voltado para no máximo a interface do site e até 2009 essa linguagem n�
 
 ## 4.1 Server-side JS
 
-Node.js começou apenas como uma biblioteca que permitia rodar código Javascript do lado do servidor, ou seja, fora do navegador
-Para isso o Javascript passou a rodar gentro de uma maquina virtual criada pela Google chamada V8 engine que é escrita em C++ e compila funções JS em código de máquina. Que é o ambiente de runtime Javascript que o Google Chrome usa,conhecido por ser muito rápido. A Google investe muito nessa engine e sua performance é sempre aprimorada
+Node.js começou apenas como uma biblioteca que permitia rodar código Javascript do lado do servidor, ou seja, fora do navegador.
+Para isso o Javascript passou a rodar gentro de uma maquina virtual criada pela Google chamada V8 engine que é escrita em C++ e compila funções JS em código de máquina. Que é o ambiente de runtime Javascript que o Google Chrome usa,conhecido por ser muito rápido. A Google investe muito nessa engine e sua performance é sempre aprimorada.
 
 Com isso além da melhora em performance e eficiencia das aplicações podemos fazer coisas que antes não podiamos com o browser como pode exemplo, ter acesso a a arquivos de um computador, sockets TCP que permitem requisições entre outros.
 
@@ -26,3 +26,7 @@ Node.js é cross-platform, ou seja, um desenvolvedor Node pode criar aplicaçõe
 Isso é importante porque somente com o conhecimento Javascript já podemos ter um leque de aplicações que podemos desenvolver.
 
 Além disso Node.js permite o uso de modulos, ou seja, que eu possa baixar pedaços de código e biblioteca de outras pessoas no meu projeto, dessa forma não preciso escrever que preciso fazer do 0.
+
+No geral usamos para fazer aplicações de linha de comando, aplicações web, aplicações de chat real-time e APIs REST. E o mais legal é que Node.js está em uma licença MIT, ou seja é um framework open-source.
+
+Em nosso próximo capitulo vamos aprender a fazer uma API REST Node com todo o ferramental avançado e production ready!
