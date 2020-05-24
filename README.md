@@ -49,21 +49,22 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
 3. Database
     - [Mongoose]()
     - [Models]()
-3. Testing
+4. Testing
     - [Jest]()
-4. Auth
+5. Auth
     - [JWT]()
     - [Password middleware]()
     - [Login]()
     - [Guards]()
-4. Assincronismo
+6. Assincronismo
     - [Event loop]()
     - [Operações bloqueantes]()
     - [Callbacks]()
     - [Promises]()
     - [Lidando com promises]()
     - [Event-driven]()
-5. More
+7. Mais
+    - [Node.js via docker](./contents/7-mais/docker.md)
     - [File system]()
 
 ## Quero contribuir
