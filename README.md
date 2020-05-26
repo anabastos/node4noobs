@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/anabastos/node4noobs">
-    <img src="./assets/node.jpeg" alt="Logo">
+    <img src="./assets/node.svg" alt="Logo">
   </a>
 </p>
 
