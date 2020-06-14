@@ -25,7 +25,7 @@ O tutorial do Node4noobs tem o objetivo de ensinar sobre o funcionamento do ecos
 O intuito é que pessoas com pouca experiência possam ter conceito o suficiente para se sentirem confiantes fazendo aplicações back-end production-ready.
 
 ### Pré requisitos
-Entendimento básico de linha de comando e javascript. Você pode ver outros 4noobs com esses conteúdos como o [javascript4noobs](https://github.com/ThiagoDellaNoce/javascript4noobs) ou o sh4noobs.
+Entendimento básico de linha de comando e javascript. Você pode ver outros 4noobs com esses conteúdos como o [javascript4noobs](https://github.com/ThiagoDellaNoce/javascript4noobs) ou o [zh4noobs](https://github.com/edersonferreira/zsh4noobs).
 
 ### O que é Node.js?
 Node.js não é uma linguagem ou um framework mas sim é um ecossistema cross-platform para rodar Javascript gratuito e open source.
