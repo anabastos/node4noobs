@@ -1,5 +1,5 @@
 
-## 4. História do Javascript
+## 1. História do Javascript
 
 Quando a internet começou navegadores eram apenas estáticos, ou seja, eram simples arquivos *HTML* e *CSS*. A revolução começou em 94, quando o navegador Netspace foi inventado, em que com a necessidade de fazer requisições notaram que navegadores talvez precisassem de uma linguagem.
 
@@ -9,7 +9,7 @@ A linguagem foi evoluindo com o passar dos anos, de sua primeira versão de "dez
 
 JS era voltado para no máximo a interface do site e até 2009 essa linguagem não era usada para construir sites complexos ou back-end como podemos em linguagens como PHP, Ruby ou Java até sugir o Node.js.
 
-## 4.1 Server-side JS
+## 1.1 Server-side JS
 
 Node.js começou apenas como uma biblioteca que permitia rodar código Javascript do lado do servidor, ou seja, fora do navegador.
 Para isso o Javascript passou a rodar gentro de uma maquina virtual criada pela Google chamada V8 engine que é escrita em C++ e compila funções JS em código de máquina. Que é o ambiente de runtime Javascript que o Google Chrome usa,conhecido por ser muito rápido. A Google investe muito nessa engine e sua performance é sempre aprimorada.

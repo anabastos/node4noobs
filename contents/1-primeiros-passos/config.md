@@ -1,10 +1,10 @@
-## 3. Configurações iniciais
+## 5. Configurações iniciais
 
 Essa é a parte mais "chatinha" mas é o que vai garantir um resultado mais _production ready_ para nosso projeto!
 A maior parte dos projetos do mercado fazem uso extensivo dessas ferramentas para garantir uma boa qualidade de código. Vamos então fazer um setup de configuração básica.
 
-## 3.1 Eslint
-O QUE E ESLINT
+## 5.1 Eslint
+TODO O QUE E ESLINT
 
 Agora vamos adicionar o eslint como dependência e rodar o seu _init_.
 
@@ -31,7 +31,7 @@ Você pode ler um pouco mais sobre o styleguide que escolhemos aqui: [Airbnb Sty
 
 Note que agora temos um arquivo de configuração chamado `.eslintrc.js` na raiz do nosso projeto. Ela que define as regras de linting do nosso projeto.
 
-## 3.2 Babel
+## 5.2 Babel
 Babel é um compilador em que escrevemos o javascript mais moderno e temos como output um javascript que roda em qualquer plataforma.
 
 Vamos instalar suas dependências com o seguinte comando.
