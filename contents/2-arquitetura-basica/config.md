@@ -24,9 +24,10 @@ DB_HOST=localhost
 
 ### 2.2 Usando as configurações do arquivo .env
 
-Precisamos criar um arquivo que retorna um objeto com todos valores da configuração.
-
 #### 2.2.1 Criação de um arquivo de configuração
+
+Precisamos criar um arquivo que retorna um objeto com todos valores da configuração.
+Esse arquivo faz o import da configuração do .env e exporta um objeto com as chaves definidas;
 
 ```javascript
 // config.js
@@ -40,7 +41,7 @@ export default {
 };
 ```
 
-#### 2.2.2 Usa-se o arquivo de configuração que usa o arquivo .env
+#### 2.2.2 Usando o arquivo de configuração que usa o arquivo .env
 
 Agora é só usar o arquivo de configuração como você usaria qualquer arquivo de constantes.
 
