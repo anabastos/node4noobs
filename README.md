@@ -29,7 +29,7 @@ Entendimento básico de linha de comando e javascript. Você pode ver outros 4no
 
 ### O que é Node.js?
 Node.js não é uma linguagem ou um framework mas sim é um ecossistema cross-platform para rodar Javascript gratuito e open source.
-Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em navegadores como também para fazer Javascript server-side, mas atualmente é uma ferramenta essencial full-stack, ou seja, é usado para desenvolver aplicações front-end e back-end. 
+Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em navegadores como também para fazer Javascript server-side, mas atualmente é uma ferramenta essencial full-stack, ou seja, é usado para desenvolver aplicações front-end e back-end.
 
 ## Conteúdos
 1. Primeiros passos
@@ -42,7 +42,7 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
     - [Basicos HTTP](./contents/2-arquitetura-basica/http.md)
     - [Express](./contents/2-arquitetura-basica/express.md)
     - [Rotas](./contents/2-arquitetura-basica/rotas.md)
-    - [Config]()
+    - [Config](./contents/2-arquitetura-basica/config.md)
     - [Middlewares]()
     - [Controllers]()
     - [Services]()
@@ -84,6 +84,7 @@ E tchadam! Tá pronto o sorvetinho ✨
 <a href="https://github.com/anabastos"><img src="https://avatars3.githubusercontent.com/u/10088900" title="anabastos" width="72" height="72"></a>
 <a href="https://github.com/PoorlyDefinedBehaviour"><img src="https://avatars0.githubusercontent.com/u/17282221" title="PoorlyDefinedBehaviour" width="72" height="72"></a>
 <a href="https://github.com/hugogomess"><img src="https://avatars3.githubusercontent.com/u/30708062" title="hugogomess" width="72" height="72"></a>
+<a href="https://github.com/kkfuri"><img src="https://avatars0.githubusercontent.com/u/42350846" title="kkfuri" width="72" height="72"></a>
 
 ## Autores
 
