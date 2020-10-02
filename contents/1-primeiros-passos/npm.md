@@ -143,7 +143,7 @@ Para permitir releases PATCH e MINOR usamos o chapeu (^). Permitindo updates em 
 Note que temos o campo `scripts` no nosso arquivo, esse scripts é um meio de automatizar tarefas repetitivas.
 
 Geralmente criamos scripts para iniciar o servidor, rodar testes, ou rodar geradores de código.
-O conteúdo de um `script` consiste em um simples comando de terminal portanto podemos automatizar o comando `node index.js` que acamos de rodar.
+O conteúdo de um `script` consiste em um simples comando de terminal portanto podemos automatizar o comando `node index.js` que acabamos de rodar.
 
 Após um tempo rodar o arquivo raiz do nosso projeto vai se tornar cada vez mais longo complexo dependendo da nossa configuração, para isso vamos criar o comando `start` que roda o arquivo raiz do nosso projeto chamando a dependência que acabamos de instalar , o `nodemon`.
 ```
