@@ -94,7 +94,9 @@ TODO como pegar coisas do corpo
 ### 3.2.4 Criando rotas PUT
 
 ```javascript
-app.post('/user', (req, res) => {
+app.put('/user', (req, res) => {
+    var user = req.body.user;
+    // faça alguma coisa com o usuario...
     res.send('Hello World!');
   });
 ```
@@ -102,7 +104,9 @@ app.post('/user', (req, res) => {
 ### 3.2.5 Criando rotas DELETE
 
 ```javascript
-app.post('/user', (req, res) => {
+app.delete('/user/:id', (req, res) => {
+    var id = req.params.id;
+    // faça alguma coisa com o id ...
     res.send('Hello World!');
   });
 ```
