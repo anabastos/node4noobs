@@ -1,7 +1,7 @@
 
 ### 6. Controllers
 
-Como vimos nos capitulos anteriores, depois de definirmos as rotas da nossa aplicação precisamos implementar os métodos que estão relacionados a cada request.
+Como vimos nos capitulos anteriores, depois de definirmos as rotas da nossa aplicação precisamos implementar os métodos que estão relacionados a cada request. O *controller* é o responsável por processar os requests e comunicar-se com a camada da aplicação de Modelo (API's/Banco de dados) e dar uma resposta para cada requisição.
 
 Basicamente, o controller vai ser invocado para cada rota mapeada na aplicação. Vamos considerar um cenário de aplicação onde devemos manter usuários.
 
