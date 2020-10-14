@@ -69,6 +69,35 @@ Com esse pedaço de código estamos falando para a instância express: "Caso rec
 
 ### 3.2.2 Criando rotas GET parametrizaveis.
 
+Para lidar com requisições GET podemos enviar parametros pela URL. Isso é muito comum de se ver em RESTful API's.
+
+Por exemplo:
+
+**GET**     /user => vai trazer todos os usuarios da aplicacao
+
+**GET**     /user/:id => vai trazer o usuário com o id especificado
+
+**PUT**     /user/:id => vai editar um usuário com id especificado
+
+**DELETE**  /user/:id => vai deleter um usuário com o id especificado
+
+Como podemos obter os parametros da rota? Vamos utilizar como exemplo o nosso segundo cenário, onde obtemos um usuário atraves de seu id.
+
+```javascript
+app.get('/user/:id', (req, res) => {
+    const id = req.params.id
+    // aqui vai sua logica para obter o usuario (do banco de dados ou de uma API)
+    res.send(`$You were looking for user with id = {id}`);
+  });
+```
+
+Conforme podemos ver o nosso ```req.params``` faz com que obtenhamos o parametros dentro da nossa rota.
+Como no nosso caso enviamos um **id** pela rota a maneira de obter o mesmo é:
+
+```javascript
+var id = req.params.id
+```
+
 ### 3.2.3 Criando rotas POST
 
 Para lidar com requisições POST precisamos instalar o modulo middleware chamado `body-parser`.
@@ -89,24 +118,28 @@ app.post('/user', (req, res) => {
   });
 ```
 
-TODO como pegar coisas do corpo
-
 ### 3.2.4 Criando rotas PUT
+
+Conforme mostrado no exemplo anterior (POST), devemos utilizar o nosso middleware `body-parser` para que obtenhamos o conteudo que foi enviado atraves do request.
+
+A unica diferenca entre POST e PUT e que o *PUT* é utilizado para atualizar um recurso, ja o *POST* é utilizado para criar um novo recurso.
 
 ```javascript
 app.put('/user', (req, res) => {
     var user = req.body.user;
-    // faça alguma coisa com o usuario...
-    res.send('Hello World!');
+    // faça atualize o usuario...
+    res.send(`Updated user is ${user}`);
   });
 ```
 
 ### 3.2.5 Criando rotas DELETE
 
+Esse e o tipo de rota para deletar uma entidade/recurso. Como mencionado anteriormente, é muito comum se ver em RESTful API's as rotas de DELETE para excluir/deletar dados.
+
 ```javascript
 app.delete('/user/:id', (req, res) => {
     var id = req.params.id;
-    // faça alguma coisa com o id ...
-    res.send('Hello World!');
+    // delete o usuario pelo id ...
+    res.send('User deleted successfully!');
   });
 ```
