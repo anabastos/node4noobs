@@ -27,8 +27,6 @@ exports.deleteUser = function (req, res) {};
 exports.getUser = function (req, res) {};
 ```
 
-* Obs: vamos utilizar o framework **express** do npm para criar nosso servidor, definirmos as rotas e nossos metodos do controller.
-
 Precisamos mapear os metodos do controller com as nossas rotas, portanto vamos importar o nosso controller dentro das nossas rotas.
 
 ```javascript
