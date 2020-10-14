@@ -12,7 +12,7 @@ Vamos definir os metodos do nosso controller para que interprete cada ação/req
 3. Deleter usuario - (deleteUser)
 4. Obter usuario - (getUser/:id) - vamos obter um usuario em especifico
 
-Nosso controller deve parecer como isso:
+Nosso controller deve ficar assim:
 
 ```javascript
 // controllers/users.js
