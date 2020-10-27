@@ -18,7 +18,7 @@ import mongodb from 'mongodb'
 const MongoClient = mongodb.MongoClient;
 
 MongoClient.connect("mongodb://localhost:27017/heartdevs", function (err, db) {
-    //  if(err) throw err;
+  //  if(err) throw err;
 });
 ```
 

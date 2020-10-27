@@ -1,4 +1,3 @@
-
 ## 1. História do Javascript
 
 Quando a internet começou navegadores eram apenas estáticos, ou seja, eram simples arquivos *HTML* e *CSS*. A revolução começou em 94, quando o navegador Netscape foi inventado, em que com a necessidade de fazer requisições notaram que navegadores talvez precisassem de uma linguagem.

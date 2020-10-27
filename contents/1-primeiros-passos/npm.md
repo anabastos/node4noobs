@@ -1,6 +1,6 @@
 ## 3. Começando o projeto pela NPM
 
-O **NPM**(_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
+O **NPM** (_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
 
 ### 3.1 Primeiros Passos
 
@@ -8,6 +8,7 @@ Geralmente começamos um projeto por meio da `npm`, que vem junto do Node.js já
 Podemos checar se temos o npm por meio do `npm version`.
 
 Para iniciar um projeto criamos uma pasta com o nome do projeto, entramos nela e rodamos o `npm init` para gerar nosso projeto inicial.
+
 ```bash
 mkdir node4noobs # Cria a pasta
 cd node4noobs # Entra na pasta
@@ -47,6 +48,7 @@ Ele guarda todas as informações de projetos com nome, versão, e diversas info
 
 Ainda não criamos nosso arquivo inicial do projeto chamado `index.js`.
 Portanto vamos criar esse arquivo na raiz do nosso projeto com o `console.log` que é uma forma de logarmos conteúdo no nosso console.
+
 ```javascript
 // index.js
 
@@ -85,13 +87,13 @@ npm install --save-dev nodemon
 
 Se checarmos nosso `package.json` vemos que agora as dependências do pacote está listadas
 
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
 ```json
+"dependencies": {
+  "express": "^4.17.1"
+},
+"devDependencies": {
+  "nodemon": "^2.0.3"
+}
 ```
 
 Como podemos remover esses pacotes se não queremos mais eles? Apenas removemos a chave-valor do `package.json`!
@@ -106,15 +108,14 @@ Todos os pacotes são salvos na pasta `node_modules`. Por ser uma pasta com arqu
 node_modules/
 ```
 
-Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando
-`npm i`
+Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando `npm i`
 
 #### 3.2.1 Versionamento de pacotes
 
 As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependências. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
 
-  "package": "MAJOR.MINOR.PATCH"
 ```json
+"package": "MAJOR.MINOR.PATCH"
 ```
 
 A versão *MINOR* apenas incrementa novas funcionalidades enquanto o *PATH* fazer fixes e resolve bugs. Incrementar essas versões não devem "mudar" alguma funcionalidade já existênte.
@@ -162,5 +163,3 @@ Se alterarmos o conteúdo do nosso `index.js` para `console.log('He4rtDevs!!!!!!
 <p align="center">
   <a><img width=400" src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>
 </p>
-
-

@@ -26,7 +26,6 @@ Agora o eslint vai te fazer perguntas sobre a instalação. O ideal é responder
 ? Would you like to install them now with npm? **yes**  
 After that eslint setup will be done.
 
-
 Você pode ler um pouco mais sobre o styleguide que escolhemos aqui: [Airbnb Styleguide](https://github.com/airbnb/javascript)
 
 Note que agora temos um arquivo de configuração chamado `.eslintrc.js` na raiz do nosso projeto. Ela que define as regras de linting do nosso projeto.
@@ -35,6 +34,7 @@ Note que agora temos um arquivo de configuração chamado `.eslintrc.js` na raiz
 Babel é um compilador em que escrevemos o javascript mais moderno e temos como output um javascript que roda em qualquer plataforma.
 
 Vamos instalar suas dependências com o seguinte comando.
+
 ```bash
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
 ```
@@ -56,4 +56,3 @@ Voltando ao nosso `package.json` vamos modificar nosso script de `start` para in
     "start": "nodemon --exec babel-node index.js ",
   },
 ```
-

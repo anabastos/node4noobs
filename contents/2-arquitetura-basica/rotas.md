@@ -1,4 +1,3 @@
-
 ### 3. Definindo rotas
 
 Vimos como fazer um servidor HTTP para nossa aplicação back-end. Esse servidor precisa responder a requests dependendo do URL que é pedido.
@@ -17,8 +16,8 @@ Lembra dessa parte de código que fizemos?
 
 ```javascript
 app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
+  res.send('Hello World!');
+});
 ```
 
 No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHOD, o tipo do método HTTP, ROTA o caminho da URL da requisição e HANDLER a função que lida com a requisição e define a resposta que vamos enviar ao cliente.
@@ -27,6 +26,7 @@ No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHO
 
 Testamos nossa primeira rota usando o navegador para fazer uma requisição `GET`
 Caso você esteja usando um Mac ou Linux, com o servidor rodando podemos também usar o `curl` para testar uma requisição pro nosso servidor. Basta rodar o seguinte comando:
+
 ``` bash
 curl -i http://localhost:5000
 ```
@@ -57,8 +57,8 @@ No nosso exemplo de código fizemos:
 
 ```javascript
 app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
+  res.send('Hello World!');
+});
 ```
 
 `get` é uma função do express, e nela definimos com apenas dois argumentos tudo o que precisamos da nossa rota. O primeiro argumento é a rota, no caso é a raiz do nosso servidor `http://localhost:3000/`, e o segundo é uma função. 
@@ -85,10 +85,10 @@ Como podemos obter os parâmetros da rota? Vamos utilizar como exemplo o nosso s
 
 ```javascript
 app.get('/user/:id', (req, res) => {
-    const id = req.params.id
-    res.send(`$You were looking for user with id = {id}`);
-  });
+  const id = req.params.id
   // aqui vai sua logica para obter o usuário (do banco de dados ou de uma API)
+  res.send(`$You were looking for user with id = {id}`);
+});
 ```
 
 Conforme podemos ver o nosso ```req.params``` faz com que obtenhamos o parâmetros dentro da nossa rota.
@@ -106,16 +106,17 @@ O que ele faz é parsear conteúdo enviado dentro da requisição POST em algo u
 Instale-o com o comando `npm install body-parser --save` e importe-o no topo do nosso arquivo.
 Com a função `app.use` definimos um middleware pra nossa aplicação, que cria um objeto `body` dentro de nossa requisição com o conteúdo que foi enviado.
 
-Agora vamos criar uma requisição de POST.  
+Agora vamos criar uma requisição de POST.
+
 ```javascript
 import bodyParser from 'body-parser'
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post('/user', (req, res) => {
-    const data = req.body
-    res.send(`${data.name} Submitted Successfully!`);
-  });
+  const data = req.body
+  res.send(`${data.name} Submitted Successfully!`);
+});
 ```
 
 ### 3.2.4 Criando rotas PUT
@@ -126,10 +127,10 @@ A única diferença entre POST e PUT e que o *PUT* é utilizado para atualizar u
 
 ```javascript
 app.put('/user', (req, res) => {
-    var user = req.body.user;
-    res.send(`Updated user is ${user}`);
-  });
+  var user = req.body.user;
   // faça atualize o usuário...
+  res.send(`Updated user is ${user}`);
+});
 ```
 
 ### 3.2.5 Criando rotas DELETE
@@ -138,8 +139,8 @@ Esse e o tipo de rota para deletar uma entidade/recurso. Como mencionado anterio
 
 ```javascript
 app.delete('/user/:id', (req, res) => {
-    var id = req.params.id;
-    res.send('User deleted successfully!');
-  });
+  var id = req.params.id;
   // delete o usuário pelo id ...
+  res.send('User deleted successfully!');
+});
 ```

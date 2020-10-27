@@ -11,11 +11,11 @@ Basicamente, middlewares são funções que tem acesso ao objeto da requisição
 
 Uma função middleware possui a seguinte sintaxe:
 
-  function myMiddleware (req, res, next) {
-    // seu código aqui
-    next();
-  }
 ```js
+function myMiddleware (req, res, next) {
+  // seu código aqui
+  next();
+}
 ```
 
 - `req`: objeto da requisição;
@@ -26,18 +26,18 @@ Uma função middleware possui a seguinte sintaxe:
  
 ```js
 function myMiddleware (req, res, next) {
-    console.log("Primeiro log");
-    next();
+  console.log("Primeiro log");
+  next();
 }
 
 app.use(myMiddleware);
 
 app.get("/", (req, res) => {
-     console.log("Segundo log");
-     return res.send("Hello World");
- });
+  console.log("Segundo log");
+  return res.send("Hello World");
+});
 ```
- 
+
 ### 8.2 Empregabilidade
 
 Na prática, funções de middlewares podem executar as seguintes tarefas:
@@ -59,6 +59,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.post('/user', (req, res) => {
     const data = req.body
     res.send(`${data.name} Submitted Successfully!`);
+  const data = req.body
+  res.send(`${data.name} Submitted Successfully!`);
 });
 ```
 
@@ -78,9 +80,10 @@ O middleware precisa ser definido antes das funções de roteamento:
 app.use((req, res, next) => {
     if (!userIsLogged(req)) {
         return res.redirect("/login"); // redirecionamento para a página de login
-    }
+  if (!userIsLogged(req)) {
+      return res.redirect("/login"); // redirecionamento para a página de login
+  }
 
-    next(); // chama a próxima função da pilha
 });
 
 app.get(`/admin/posts`, (req, res) => {
@@ -97,10 +100,10 @@ Outro exemplo prático é a criação de um middleware que é executado toda vez
 
 Para isso, vamos:
 
- - Utilizar o módulo externo `node-color-log` para apresentar as mensagens. Este módulo foi apresentado neste tutorial [Módulos]("../1-primeiros-passos/modulos.md")
- - Criar um arquivo e definir a função de middleware;
- - Utilizar o objeto `req` para pegar informações da requisição (como method HTTP, endpoint de acesso e host) e exibir no log;
- - E também utilizaremos a função `next` para que depois de exibir o log de acesso, a aplicação chame o próximo middleware da pilha.
+- Utilizar o módulo externo `node-color-log` para apresentar as mensagens. Este módulo foi apresentado neste tutorial [Módulos](../1-primeiros-passos/modulos.md)
+- Criar um arquivo e definir a função de middleware;
+- Utilizar o objeto `req` para pegar informações da requisição (como method HTTP, endpoint de acesso e host) e exibir no log;
+- E também utilizaremos a função `next` para que depois de exibir o log de acesso, a aplicação chame o próximo middleware da pilha.
 
 Arquivo `./src/middlewares/log-access.js`:
 
@@ -108,14 +111,14 @@ Arquivo `./src/middlewares/log-access.js`:
 import logger from 'node-color-log';
 
 function logAccess (req, res, next) {
-    const { hostname, method, url } = req;
-    
-    logger.info(`[LOG] hostname = ${hostname}`);
-    logger.info(`[LOG] method = ${method}`);
-    logger.info(`[LOG] endpoint = ${url}`);
-    logger.info("\n");
+  const { hostname, method, url } = req;
+  
+  logger.info(`[LOG] hostname = ${hostname}`);
+  logger.info(`[LOG] method = ${method}`);
+  logger.info(`[LOG] endpoint = ${url}`);
+  logger.info("\n");
 
-    next();
+  next();
 }
 
 export default logAccess;
@@ -131,8 +134,7 @@ const app = express();
 app.use(logAccess);
 
 app.get("/", (req, res) => {
-    return res.send("Hello World");
+  return res.send("Hello World");
 });
-
 ...
 ```

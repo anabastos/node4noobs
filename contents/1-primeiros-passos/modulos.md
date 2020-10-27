@@ -73,7 +73,6 @@ export default { users }
 Para expor o meu objeto `users` para o resto do meu projeto node preciso usar o `export default` em frente ao users. Em que falamos que o objeto contendo os usuários serão o conteúdo exportado do arquivo.
 Usamos o `export default` para expor qualquer tipo de função, objeto ou variável de um modulo.
 
-
 Agora voltando ao meu arquivo `index.js` eu posso importar o arquivo que criamos simplesmente chamando esse novo import especificando o caminho dele dentro do projeto `./data`. O `.` denota a pasta raiz do projeto.
 
 ```javascript
