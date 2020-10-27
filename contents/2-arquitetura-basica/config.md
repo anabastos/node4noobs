@@ -1,6 +1,6 @@
 ## 4. Config
 
-Como devo fazer minhas configurações no NodeJS?
+Como devo fazer minhas configurações no NodeJS?  
 R: Usa-se o Dotenv (.env).
 
 ### 2.1 Criando um arquivo .env
