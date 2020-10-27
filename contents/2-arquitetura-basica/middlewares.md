@@ -1,12 +1,12 @@
-# 8. Middlewares
+# 5. Middlewares
 
 Até aqui, sabemos que o Express é um gerenciador de rotas responsável por controlar o fluxo de requisições (entrada) e de respostas (saída) de uma aplicação. E é neste fluxo que entra os middlewares.
 
-## 8.1 Mas o que são Middlewares?
+## 5.1 Mas o que são Middlewares?
 
 Basicamente, middlewares são funções que tem acesso ao objeto da requisição e resposta, além do próximo middleware da pilha que deve ser executado.
 
-### 8.1.1 Sintaxe
+### 5.1.1 Sintaxe
 
 Uma função middleware possui a seguinte sintaxe:
 
@@ -21,7 +21,7 @@ function myMiddleware (req, res, next) {
 - `res`: objeto de resposta;
 - `next`: função responsável por chamar o próximo middleware da pilha;
 
-### 8.1.2 Integrando ao express
+### 5.1.2 Integrando ao express
  
 ```js
 function myMiddleware (req, res, next) {
@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 });
 ```
 
-## 8.2 Empregabilidade
+## 5.2 Empregabilidade
 
 Na prática, funções de middlewares podem executar as seguintes tarefas:
 
@@ -61,7 +61,7 @@ app.post('/user', (req, res) => {
 });
 ```
 
-## 8.3 Ordem de chamada
+## 5.3 Ordem de chamada
 
 Os middlewares e as funções de roteamento (GET, POST, PUT, DELETE) são chamadas na mesma ordem em que são declaradas. 
 
@@ -89,7 +89,7 @@ app.get(`/admin/posts`, (req, res) => {
 
 Este middleware realiza uma verificação se o usuário está autenticado. Se sim, chama a próxima função da pilha através da chamada `next()`. Caso contrário, encerra o ciclo e redireciona o usuário a página de login.
 
-## 8.4 Log de acesso
+## 5.4 Log de acesso
 
 Outro exemplo prático é a criação de um middleware que é executado toda vez que chamamos um endpoint da nossa aplicação. O objetivo deste middleware é loggar os acessos.
 
