@@ -11,11 +11,11 @@ Basicamente, middlewares são funções que tem acesso ao objeto da requisição
 
 Uma função middleware possui a seguinte sintaxe:
 
-```
   function myMiddleware (req, res, next) {
     // seu código aqui
     next();
   }
+```js
 ```
 
 - `req`: objeto da requisição;
@@ -24,7 +24,7 @@ Uma função middleware possui a seguinte sintaxe:
 
 #### 8.1.2 Integrando ao express
  
-```
+```js
 function myMiddleware (req, res, next) {
     console.log("Primeiro log");
     next();
@@ -51,7 +51,7 @@ Além disso, a maioria das aplicações usam middlewares de terceiros para simpl
 
 Por exemplo, no módulo sobre [Rotas](./rotas.md), ao realizar a instalação do módulo `body-parser` para tratar o body das nossas requisições estavámos incluindo um middleware de terceiro à nossa aplicação:
 
-```
+```js
 import bodyParser from 'body-parser'
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -73,7 +73,7 @@ Podemos então definir um middleware responsável por verificar em todas as requ
 
 O middleware precisa ser definido antes das funções de roteamento:
 
-```
+```js
 ...
 app.use((req, res, next) => {
     if (!userIsLogged(req)) {
@@ -104,7 +104,7 @@ Para isso, vamos:
 
 Arquivo `./src/middlewares/log-access.js`:
 
-```
+```js
 import logger from 'node-color-log';
 
 function logAccess (req, res, next) {
@@ -123,7 +123,7 @@ export default logAccess;
 
 Arquivo `./src/index.js`:
 
-```
+```js
 import express from 'express';
 import logAccess from './middlewares/log-access';
 

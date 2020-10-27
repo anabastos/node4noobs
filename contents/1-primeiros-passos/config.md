@@ -51,7 +51,7 @@ Com ele temos as principais habilidades do babel com o node. Mas antes precisamo
 
 Voltando ao nosso `package.json` vamos modificar nosso script de `start` para iniciar fazendo uso do babel.
 
-```javascript
+```json
   "scripts": {
     "start": "nodemon --exec babel-node index.js ",
   },

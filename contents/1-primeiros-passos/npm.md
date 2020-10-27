@@ -79,19 +79,19 @@ Quando estamos desenvolvendo um servidor node, muitas vezes precisamos rodar, mo
 Para isso vamos instalar o `nodemon`, que é uma ferramenta para podermos rodarmos o projeto com auto-reload, ou seja, o servidor node restarta assim que mexemos com o arquivo tornando nosso desenvolvimento mais produtivo.
 Pelo `nodemon` ser uma ferramenta de desenvolvimento geralmente instalamos com o `--save-dev`.
 
-```
+```bash
 npm install --save-dev nodemon
 ```
 
 Se checarmos nosso `package.json` vemos que agora as dependências do pacote está listadas
 
-```javascript
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
   }
+```json
 ```
 
 Como podemos remover esses pacotes se não queremos mais eles? Apenas removemos a chave-valor do `package.json`!
@@ -113,8 +113,8 @@ Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o 
 
 As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependências. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
 
-```javascript
   "package": "MAJOR.MINOR.PATCH"
+```json
 ```
 
 A versão *MINOR* apenas incrementa novas funcionalidades enquanto o *PATH* fazer fixes e resolve bugs. Incrementar essas versões não devem "mudar" alguma funcionalidade já existênte.
@@ -124,7 +124,7 @@ Então por exemplo, se sair uma versão 5.0 do express é bem possível que algu
 
 Na maioria das vezes não queremos perder bug fixes de nossas ferramentas mas não queremos correr o risco que o que funciona hoje, pare de funcionar amanhã. Pra isso podemos congelar um pacote em uma versão que queremos em nossas dependências usamos o tio (~). Ele permite apenas releases de PATCH nos pacotes. Permitindo updates em qualquer versão 4.14.x
 
-```javascript
+```json
 "dependencies": {
   "express": "~4.14.0"
 }
@@ -132,7 +132,7 @@ Na maioria das vezes não queremos perder bug fixes de nossas ferramentas mas n�
 
 Para permitir releases PATCH e MINOR usamos o chapéu (^). Permitindo updates em qualquer versão 4.x.x
 
-```javascript
+```json
 "dependencies": {
   "express": "^4.14.0"
 }
@@ -146,7 +146,8 @@ Geralmente criamos scripts para iniciar o servidor, rodar testes, ou rodar gerad
 O conteúdo de um `script` consiste em um simples comando de terminal portanto podemos automatizar o comando `node index.js` que acabamos de rodar.
 
 Após um tempo rodar o arquivo raiz do nosso projeto vai se tornar cada vez mais longo complexo dependendo da nossa configuração, para isso vamos criar o comando `start` que roda o arquivo raiz do nosso projeto chamando a dependência que acabamos de instalar , o `nodemon`.
-```
+
+```json
 ...
   "scripts": {
     "start": "nodemon index.js"
