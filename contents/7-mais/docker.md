@@ -25,7 +25,7 @@ crie um arquivo `package.json` que descreva seu aplicativo e suas dependências:
 }
 ```
 
-Com seu novo arquivo `package.json`, rode `npm install`. Se você estiver uzando a versão 
+Com seu novo arquivo `package.json`, rode `npm install`. Se você estiver usando a versão 
 do `npm` 5 ou posterior, isso gerará um `package-lock.json` e o arquivo sera copiado para
 sua imagem Docker
 
@@ -77,7 +77,7 @@ Em seguida, criamos um diretório para armazenar o código do aplicativo dentro
 da imagem; este será o workspace do seu aplicativo:
 
 ```docker
-# Crie o diretorio da aplicação
+# Crie o diretório da aplicação
 WORKDIR /usr/src/app
 ```
 
@@ -86,7 +86,7 @@ precisamos fazer é instalar as dependências do aplicativo usando o binário do
 Observe que, se você estiver usando a  versão 4 ou anterior do npm, o arquivo `package-lock.json` não será gerado.
 
 ```docker
-# Instale as dependencias do app
+# Instale as dependências do app
 # Um curinga é usado para garantir que o package.json e o package-lock.json sejam copiados
 # disponível no (npm@5+)
 COPY package*.json ./
@@ -130,10 +130,10 @@ Agora seu Dockerfile deve ter esta aparência:
 ```docker
 FROM node:12
 
-# Crie o diretorio da aplicação
+# Crie o diretório da aplicação
 WORKDIR /usr/src/app
 
-# Instale as dependencias do app
+# Instale as dependências do app
 # Um curinga é usado para garantir que o package.json e o package-lock.json sejam copiados
 # disponível no (npm@5+)
 COPY package*.json ./
@@ -151,7 +151,7 @@ CMD [ "node", "server.js" ]
 
 ## Arquivo .dockerignore
 
-Crie um arquivo `.dockerignore` no mesmo diretorio que seu `Dockerfile`
+Crie um arquivo `.dockerignore` no mesmo diretório que seu `Dockerfile`
 o seguinte conteúdo:
 
 ```

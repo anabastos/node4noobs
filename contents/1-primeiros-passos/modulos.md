@@ -1,11 +1,11 @@
-### 4. Modulos NPM
+### 4. Módulos NPM
 
-No capitulo anterior a titulo de exempo importamos o pacote npm chamado `express`. Mas o que são pacotes?
-Pacotes são pedaços de código que estão cadastrados na npm, que quando queremos usar em nosso projeto podemos importa-los. Esse pedaço de código chamamos de modulos, e eles ficam guardado dentro da pasta `node_modules`.
+No capítulo anterior a título de exemplo importamos o pacote npm chamado `express`. Mas o que são pacotes?
+Pacotes são pedaços de código que estão cadastrados na npm, que quando queremos usar em nosso projeto podemos importa-los. Esse pedaço de código chamamos de módulos, e eles ficam guardado dentro da pasta `node_modules`.
 
-A ideia é que cada um desse modulos tenha seu proprio contexto e não interfiram um nos outros, tornando o desenvolvimento mais limpo.
+A ideia é que cada um desse módulos tenha seu próprio contexto e não interfiram um nos outros, tornando o desenvolvimento mais limpo.
 
-Podemos importar esses pedaços de código pela função `require` do proprio Node.js ou pelo `import`, que é uma sintaxe mais moderna e mais amplamente usada.
+Podemos importar esses pedaços de código pela função `require` do próprio Node.js ou pelo `import`, que é uma sintaxe mais moderna e mais amplamente usada.
 
 ```javascript
 const modulo = require("nome-do-modulo")
@@ -13,11 +13,11 @@ const modulo = require("nome-do-modulo")
 import modulo from "nome-do-modulo"
 ```
 
-Existem três tipos de modulos.
+Existem três tipos de módulos.
 
 - **Local Modules:** Qualquer arquivo Javascript dentro do meu próprio projeto. Você importa no caso o caminho do para o arquivo dentro do projeto.
 - **Third Party Modules:** Pacotes feitos por terceiros. Você precisa adiciona-los dentro do `package.json` para que esse modulo seja baixado. Um exemplo é o `express` que exemplificamos no capitulo anterior. Para importar usa-se o nome do pacote.
-- **Core Modules:** Modulos do próprio node, como por exemplo `http`,`fs` ou `util`. Você não precisa adicionar eles no `package.json` pois eles já vem por padrão dentro do Node.js.
+- **Core Modules:** Módulos do próprio node, como por exemplo `http`,`fs` ou `util`. Você não precisa adicionar eles no `package.json` pois eles já vem por padrão dentro do Node.js.
 
 #### 4.1 Importando pacotes de terceiros
 
@@ -25,7 +25,7 @@ Vamos a um exemplo, abra o terminal e importe o pacote chamado `node-color-log`,
 
 Pode parecer um pacote desnecessário mas geralmente diferenciamos quais logs da nossa aplicação são erros ou avisos por meio de cores.
 
-Logs são de extrema importancia em uma aplicação madura pois temos controle sobre qualquer erro e é nosso papel como desenvolvedor back-end fazer com que eles exponham tudo o que está acontecendo no nosso servidor e sejam mais legível possível para que possamos debuggar possíveis erros.
+Logs são de extrema importância em uma aplicação madura pois temos controle sobre qualquer erro e é nosso papel como desenvolvedor back-end fazer com que eles exponham tudo o que está acontecendo no nosso servidor e sejam mais legível possível para que possamos debuggar possíveis erros.
 
 Agora em nosso index.js utilize o `import` passando o nome do pacote, `node-color-log`, para que possamos colocar o conteúdo desse módulo dentro de uma variável.
 
@@ -50,10 +50,10 @@ Agora se rodarmos `npm run start` vemos um log muito mais completo que inclui ho
 Estamos usamos o log apenas um exemplo sobre como podemos importar pacotes npm!
 Mas nos próximos capítulos vamos usa-lo de forma mais extensa principalmente para expor possíveis erros.
 
-#### 4.2 Importando modulos locais
+#### 4.2 Importando módulos locais
 
-Modulos locais são diferentes pastas ou arquivos criadas no nosso proprio projeto.
-Para isso vamos criar um modulo local que é apeans um arquivo chamado `data.js` dentro da raiz do nosso projeto.
+Módulos locais são diferentes pastas ou arquivos criadas no nosso próprio projeto.
+Para isso vamos criar um modulo local que é apenas um arquivo chamado `data.js` dentro da raiz do nosso projeto.
 
 Nele vamos apenas adicionar um objeto javascript com dados de um usuário **inventado** para nosso sistema a titulo de exemplo.
 
@@ -74,7 +74,7 @@ Para expor o meu objeto `users` para o resto do meu projeto node preciso usar o 
 Usamos o `export default` para expor qualquer tipo de função, objeto ou variável de um modulo.
 
 
-Agora voltando ao meu arquivo `index.js` eu posso importar o arquivo que eu criamos simplesmente chamando esse novo import especificando o caminho dele dentro do projeto `./data`. O `.` denota a pasta raiz do projeto.
+Agora voltando ao meu arquivo `index.js` eu posso importar o arquivo que criamos simplesmente chamando esse novo import especificando o caminho dele dentro do projeto `./data`. O `.` denota a pasta raiz do projeto.
 
 ```javascript
 // index.js
@@ -114,7 +114,7 @@ export default { users }
 
 Temos um erro! Mas porquê? O `export default` fala que esse conteúdo é o padrão ou 'default' a ser exportado por esse arquivo. E o node não sabe decidir qual é o padrão mesmo.
 
-Para isso podemos apenas usar o `export` nessa váriavel.
+Para isso podemos apenas usar o `export` nessa variável.
 
 ```javascript
 export x;
@@ -122,13 +122,13 @@ export x;
 export default { users };
 ```
 
-Se queremos importar o valor x, podemos usar esse sintaxe em que colocar entre chaves, isso faz com que a gente descontrua o modulo `data` e pegue apenas o `x`
+Se queremos importar o valor x, podemos usar esse sintaxe em que colocar entre chaves, isso faz com que a gente desconstrua o modulo `data` e pegue apenas o `x`
 
 ```javascript
 import { x } from './data';
 ```
 
-Poderiamos também usar essa sintaxe, que fala que estamos importando tudo que pode ser exportado de `exemplo` e chamando de data
+Poderíamos também usar essa sintaxe, que fala que estamos importando tudo que pode ser exportado de `exemplo` e chamando de data
 
 ```javascript
 import * as data from './data';

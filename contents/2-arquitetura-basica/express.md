@@ -15,7 +15,7 @@ Dentro do nosso index.js vamos importar e instanciar o express
   const app = express();
 ```
 
-o "app" será nossa instância do servidor. Ele que escuta portas, lida com middlewares(vamos explicar depois o que são!) e lida com requisições get e post.
+O "app" será nossa instância do servidor. Ele que escuta portas, lida com middlewares (vamos explicar depois o que são!) e lida com requisições get e post.
 
 Definiremos uma porta onde o servidor irá ficar escutando por requisições.
 

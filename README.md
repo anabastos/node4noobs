@@ -36,10 +36,10 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
     - [Sobre o node](./contents/1-primeiros-passos/sobre.md)
     - [Instalação](./contents/1-primeiros-passos/instalacao.md)
     - [NPM](./contents/1-primeiros-passos/npm.md)
-    - [Modulos](./contents/1-primeiros-passos/modulos.md)
+    - [Módulos](./contents/1-primeiros-passos/modulos.md)
     - [Configurações iniciais](./contents/1-primeiros-passos/config.md)
 2. Arquitetura Básica
-    - [Basicos HTTP](./contents/2-arquitetura-basica/http.md)
+    - [Básicos HTTP](./contents/2-arquitetura-basica/http.md)
     - [Express](./contents/2-arquitetura-basica/express.md)
     - [Rotas](./contents/2-arquitetura-basica/rotas.md)
     - [Config](./contents/2-arquitetura-basica/config.md)

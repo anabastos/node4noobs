@@ -10,14 +10,14 @@ Explicar aqui
 [ ] Error codes
 
 
-## Metodos HTTP
+## Métodos HTTP
 Geralmente em APIs REST queremos 
 
 ## Errors codes
 Quando fazemos requisições HTTP 
 
 ### GET
-O metodo GET explicita que queremos "pegar" algum tipo de informação do servidor. Esse metodo não tem intenção de modificar qualquer dado existente no servidor.
+O método GET explicita que queremos "pegar" algum tipo de informação do servidor. Esse método não tem intenção de modificar qualquer dado existente no servidor.
 Por exemplo, uma requisição **GET** no `endpoint` de `"users"` deve retornar os dados dos usuários.
 
 **Exemplos de requisições e suas respostas**
@@ -28,7 +28,7 @@ Requisição | Resposta
 **HTTP GET www.server.com/users/1/details ** | `{}`
 
 ### POST
-Usamos o metodo **POST** quando queremos adicionar dados no nosso servidor.
+Usamos o método **POST** quando queremos adicionar dados no nosso servidor.
 code 201 ? 
 
 **Exemplos de requisições e suas respostas**

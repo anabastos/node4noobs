@@ -16,7 +16,7 @@ Para isso na parte de `extensions marketplace` vamos instalar as seguintes exten
 - Babel JavaScript
 - Path Intellisense
 
-O `Path Intellisense` nos ajuda com autocomplete de modulos. Faremos uso e explicaremos mais sobre as outras extensões no decorrer do curso.
+O `Path Intellisense` nos ajuda com autocomplete de módulos. Faremos uso e explicaremos mais sobre as outras extensões no decorrer do curso.
 
 ### 2.2 Baixar o NVM
 Baixe a ultima versão do Node.js pelo próprio site, mas vamos usar uma ferramenta mais avançada para lidar com o versionamento do Node chamado NVM(_Node Version Manager_) independente de sistema operacional. Ele permite que você instale a atualize sua versão por meio de simples comandos no terminal.
@@ -59,7 +59,7 @@ undefined
 10
 ```
 
-### 2.4 Basicos Node.js
+### 2.4 Básicos Node.js
 
 Node.js suporta Javascript, então a sua sintaxe é similar ao Javascript que roda no navegador. Portanto se formos checar...
 
@@ -77,7 +77,7 @@ undefined
 Temos os mesmos tipos primitivos do Javascript!
 Mas diferente do Javascript que roda no navegador o Node.js tem um tipo novo chamado `Buffer` que guarda dados binários, vamos usa-lo mais a frente no curso!
 
-Para fazer comandos de multiplas linhas no console basta apertar **enter**, o console irá mostrar três pontos **(...)**, significando que você pode continuar na proxima linha.
+Para fazer comandos de múltiplas linhas no console basta apertar **enter**, o console irá mostrar três pontos **(...)**, significando que você pode continuar na proxima linha.
 
 ```bash
 > const obj = {
