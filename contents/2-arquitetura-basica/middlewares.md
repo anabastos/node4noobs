@@ -4,9 +4,8 @@ Até aqui, sabemos que o Express é um gerenciador de rotas responsável por con
 
 ## 8.1 Mas o que são Middlewares?
 
-Basicamente, middlewares são funções que tem acesso ao objeto da requisição e resposta, além do próximo middleware
- da pilha que deve ser executado.
- 
+Basicamente, middlewares são funções que tem acesso ao objeto da requisição e resposta, além do próximo middleware da pilha que deve ser executado.
+
 ### 8.1.1 Sintaxe
 
 Uma função middleware possui a seguinte sintaxe:
@@ -49,7 +48,7 @@ Na prática, funções de middlewares podem executar as seguintes tarefas:
 
 Além disso, a maioria das aplicações usam middlewares de terceiros para simplificar tarefas comuns de desenvolvimento web, como trabalhar com cookies, sessões, autenticação de usuários, acessar dados POST e JSON, log, etc.
 
-Por exemplo, no módulo sobre [Rotas](./rotas.md), ao realizar a instalação do módulo `body-parser` para tratar o body das nossas requisições estavámos incluindo um middleware de terceiro à nossa aplicação:
+Por exemplo, no módulo sobre [Rotas](./rotas.md), ao realizar a instalação do módulo `body-parser` para tratar o body das nossas requisições estávamos incluindo um middleware de terceiro à nossa aplicação:
 
 ```js
 import bodyParser from 'body-parser'
@@ -57,8 +56,6 @@ import bodyParser from 'body-parser'
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post('/user', (req, res) => {
-    const data = req.body
-    res.send(`${data.name} Submitted Successfully!`);
   const data = req.body
   res.send(`${data.name} Submitted Successfully!`);
 });
@@ -77,16 +74,15 @@ O middleware precisa ser definido antes das funções de roteamento:
 ```js
 ...
 app.use((req, res, next) => {
-    if (!userIsLogged(req)) {
-        return res.redirect("/login"); // redirecionamento para a página de login
   if (!userIsLogged(req)) {
       return res.redirect("/login"); // redirecionamento para a página de login
   }
 
+  next(); // chama a próxima função da pilha
 });
 
 app.get(`/admin/posts`, (req, res) => {
-    // seu código aqui
+  // seu código aqui
 });
 ...
 ```

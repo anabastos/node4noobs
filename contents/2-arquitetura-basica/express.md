@@ -39,7 +39,7 @@ app.listen(port, () => {
 });
 ```
 
-No final nosso index.js ficará assim
+No final nosso index.js ficará assim:
 
 ```javascript
 // index.js
