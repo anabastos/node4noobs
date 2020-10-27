@@ -1,4 +1,4 @@
-### 3. Definindo rotas
+# 3. Definindo rotas
 
 Vimos como fazer um servidor HTTP para nossa aplicação back-end. Esse servidor precisa responder a requests dependendo do URL que é pedido.
 
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHOD, o tipo do método HTTP, ROTA o caminho da URL da requisição e HANDLER a função que lida com a requisição e define a resposta que vamos enviar ao cliente.
 
-### 3.1 Testando rotas
+## 3.1 Testando rotas
 
 Testamos nossa primeira rota usando o navegador para fazer uma requisição `GET`
 Caso você esteja usando um Mac ou Linux, com o servidor rodando podemos também usar o `curl` para testar uma requisição pro nosso servidor. Basta rodar o seguinte comando:
@@ -47,7 +47,7 @@ Porém quando queremos testar requisições de forma efetiva e simples geralment
 
 TODO -> Como usar o amnesia para bater em rotas
 
-### 3.2 CRUD
+## 3.2 CRUD
 
 O que é uma aplicação CRUD?
 

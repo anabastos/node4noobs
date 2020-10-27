@@ -1,4 +1,4 @@
-## 5. Configurações iniciais
+# 5. Configurações iniciais
 
 Essa é a parte mais "chatinha" mas é o que vai garantir um resultado mais _production ready_ para nosso projeto!
 A maior parte dos projetos do mercado fazem uso extensivo dessas ferramentas para garantir uma boa qualidade de código. Vamos então fazer um setup de configuração básica.

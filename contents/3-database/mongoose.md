@@ -1,4 +1,4 @@
-### 1. Database
+# 1. Database
 
 Ao invés de salvar arquivos mockados na nossa aplicação o ideal é que usemos um banco de dados em que temos a flexibilidade de adicionar e remover items.
 
@@ -7,7 +7,7 @@ Node.js suporta qualquer tipo de banco de dados mas uma opção muito comum que 
 Para usar driver do MongoDB na nossa aplicação basta rodar o comando `npm install mongodb --save`.
 Com isso em outro terminal você pode rodar o comando `mongod`, isso irá fazer com que tenhamos um banco de dados local rodando na porta `27017`, que é a porta padrão do mongodb.
 
-#### Conectando ao MongoDB
+## Conectando ao MongoDB
 
 Importamos o mongodb, e com o connect 
 

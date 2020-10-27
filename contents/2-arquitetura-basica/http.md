@@ -1,5 +1,4 @@
-
-## 1. HTTP
+# 1. HTTP
 
 Explicar aqui  
 [ ] Como funciona a interação cliente e servidor  

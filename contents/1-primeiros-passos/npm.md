@@ -1,8 +1,8 @@
-## 3. Começando o projeto pela NPM
+# 3. Começando o projeto pela NPM
 
 O **NPM** (_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
 
-### 3.1 Primeiros Passos
+## 3.1 Primeiros Passos
 
 Geralmente começamos um projeto por meio da `npm`, que vem junto do Node.js já instalado.
 Podemos checar se temos o npm por meio do `npm version`.
@@ -57,7 +57,7 @@ console.log("He4rtDevs!!");
 
 Agora se rodarmos no nosso terminal o comando `node index.js` veremos o log `He4rtDevs!!`.
 
-### 3.2 Instalando dependências
+## 3.2 Instalando dependências
 
 Lembrando que o `npm` acima de tudo é um gerenciador de dependências do projeto.
 E o `package.json` tem o papel de listar os pacotes e dependências do projeto.
@@ -110,7 +110,7 @@ node_modules/
 
 Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando `npm i`
 
-#### 3.2.1 Versionamento de pacotes
+### 3.2.1 Versionamento de pacotes
 
 As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependências. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
 
@@ -139,7 +139,7 @@ Para permitir releases PATCH e MINOR usamos o chapéu (^). Permitindo updates em
 }
 ```
 
-### 3.2.3 Rodando o arquivo raiz com nodemon por meio de scripts
+## 3.2.3 Rodando o arquivo raiz com nodemon por meio de scripts
 
 Note que temos o campo `scripts` no nosso arquivo, esse scripts é um meio de automatizar tarefas repetitivas.
 

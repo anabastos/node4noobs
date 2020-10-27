@@ -1,8 +1,8 @@
-## 2. Instalação
+# 2. Instalação
 
 Para o setup inicial somente é necessário ter instalado os binários do Node.Js e um editor de texto.
 
-### 2.1 Editor de texto
+## 2.1 Editor de texto
 
 Os editores mais simples e mais leves geralmente usados no desenvolvimento Javascript são o Atom ou VisualStudio. Esse tutorial utilizaremos o VSCode, mas qualquer outro editor pode ter as mesmas funcionalidades.
 
@@ -31,7 +31,7 @@ E depois rodar este comando para exportar o conteúdo que foi instalado globalme
 
 `export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm`
 
-#### 2.2.1 Instalar a ultima versão do Node.js
+### 2.2.1 Instalar a ultima versão do Node.js
 
 Para baixar, compilar e instalar a ultima versão do node, rode este comando:
 
@@ -43,7 +43,7 @@ Para usar a ultima versão instalada rode:
 
 O NVM é uma ferramenta muito utilizada pois você pode instalar ou usar versões diferentes de node rodando comandos com o `nvm install <alguma-versão-especifica>` e `nvm use node <alguma-versão-especifica>`.
 
-### 2.3 Testando a instalação
+## 2.3 Testando a instalação
 
 Podemos testar a instalação rodando no nosso terminal `node` em que temos uma interface para rodar comandos javascript.
 
@@ -55,7 +55,7 @@ undefined
 10
 ```
 
-### 2.4 Básicos Node.js
+## 2.4 Básicos Node.js
 
 Node.js suporta Javascript, então a sua sintaxe é similar ao Javascript que roda no navegador. Portanto se formos checar...
 

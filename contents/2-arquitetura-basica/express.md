@@ -1,8 +1,8 @@
-## 2. Express
+# 2. Express
 
 O **Express** é um micro framework para gerenciamento de rotas, para entender como ele funciona iremos fazer um hello world.
 
-### 2.1 Hello World
+## 2.1 Hello World
 
 Primeiramente use os conhecimentos adquiridos na seção anterior para criar um projeto vazio com o npm. Caso não tenha lido a seção anterior [clique aqui](../1-primeiros-passos/npm.md).
 
