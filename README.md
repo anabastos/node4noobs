@@ -43,8 +43,8 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
     - [Express](./contents/2-arquitetura-basica/express.md)
     - [Rotas](./contents/2-arquitetura-basica/rotas.md)
     - [Config](./contents/2-arquitetura-basica/config.md)
-    - [Middlewares]()
-    - [Controllers]()
+    - [Middlewares](./contents/2-arquitetura-basica/middlewares.md)
+    - [Controllers](./contents/3-database/mongoose.md)
     - [Services]()
 3. Database
     - [Mongoose]()
