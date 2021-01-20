@@ -3,11 +3,11 @@
 
 Vimos como fazer um servidor HTTP para nossa aplicação back-end. Esse servidor precisa responder a requests dependendo do URL que é pedido.
 
-Por exemplo, imaginando que tenho um back-end que serve um simples Blog. Se quero posts de uma rede social imagino é esperado que no URI "servidor.com.br/posts" me retorne o conteúdo dos posts e que o URI "servidor.com.br/categories" possa me retornar as categorias dos posts do meu blog.
+Por exemplo, imaginando que tenho um back-end que serve um simples Blog. Se quero posts de uma rede social imagino é esperado que no URL "servidor.com.br/posts" me retorne o conteúdo dos posts e que o URL "servidor.com.br/categories" possa me retornar as categorias dos posts do meu blog.
 
 Quando colocamos uma rota no navegador ele imediatamente faz uma requisição `GET`. Por isso quando rodamos nosso servidor e entramos na porta `http://localhost:3000/`, ele fez uma requisição em nosso servidor em `/`
 
-Esse é o nosso primeiro **end-point**, chamamos de endpoint cada caminho de URI que definimos com um metodo HTTP. Sendo assim `posts/` ou `categories/` do nosso exemplo anteriores podem ser endpoints de uma aplicação de blog.
+Esse é o nosso primeiro **end-point**, chamamos de endpoint cada caminho de URL que definimos com um método HTTP. Sendo assim `posts/` ou `categories/` do nosso exemplo anteriores podem ser endpoints de uma aplicação de blog.
 
 Porém precisamos de algo para mapear por exemplo, que código deve ser executado para lidar com a requisição que é recebida. ainda bem que o express já faz esse trabalho pra gente!
  
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   });
 ```
 
-No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHOD, o tipo do metodo HTTP, ROTA o caminho da URL da requisição e HANDLER a função que lida com a requisição e define a resposta que vamos enviar ao cliente.
+No express definimos rotas pelo formato `app.METODO(ROTA, HANDLER)`. Sendo METHOD, o tipo do método HTTP, ROTA o caminho da URL da requisição e HANDLER a função que lida com a requisição e define a resposta que vamos enviar ao cliente.
 
 ### 3.1 Testando rotas
 
@@ -67,13 +67,13 @@ Note que essa função recebe dois argumentos, `req` e `res`. `req` no caso é u
 
 Com esse pedaço de código estamos falando para a instância express: "Caso recebamos uma requisição `GET`, na rota '/', responda com a string `"Hello World"`.
 
-### 3.2.2 Criando rotas GET parametrizaveis.
+### 3.2.2 Criando rotas GET parametrizáveis.
 
-Para lidar com requisições GET podemos enviar parametros pela URL. Isso é muito comum de se ver em RESTful API's.
+Para lidar com requisições GET podemos enviar parâmetros pela URL. Isso é muito comum de se ver em RESTful API's.
 
 Por exemplo:
 
-**GET**     /user => vai trazer todos os usuarios da aplicacao
+**GET**     /user => vai trazer todos os usuários da aplicação
 
 **GET**     /user/:id => vai trazer o usuário com o id especificado
 
@@ -81,17 +81,17 @@ Por exemplo:
 
 **DELETE**  /user/:id => vai deleter um usuário com o id especificado
 
-Como podemos obter os parametros da rota? Vamos utilizar como exemplo o nosso segundo cenário, onde obtemos um usuário atraves de seu id.
+Como podemos obter os parâmetros da rota? Vamos utilizar como exemplo o nosso segundo cenário, onde obtemos um usuário através de seu id.
 
 ```javascript
 app.get('/user/:id', (req, res) => {
     const id = req.params.id
-    // aqui vai sua logica para obter o usuario (do banco de dados ou de uma API)
     res.send(`$You were looking for user with id = {id}`);
   });
+  // aqui vai sua logica para obter o usuário (do banco de dados ou de uma API)
 ```
 
-Conforme podemos ver o nosso ```req.params``` faz com que obtenhamos o parametros dentro da nossa rota.
+Conforme podemos ver o nosso ```req.params``` faz com que obtenhamos o parâmetros dentro da nossa rota.
 Como no nosso caso enviamos um **id** pela rota a maneira de obter o mesmo é:
 
 ```javascript
@@ -120,16 +120,16 @@ app.post('/user', (req, res) => {
 
 ### 3.2.4 Criando rotas PUT
 
-Conforme mostrado no exemplo anterior (POST), devemos utilizar o nosso middleware `body-parser` para que obtenhamos o conteudo que foi enviado atraves do request.
+Conforme mostrado no exemplo anterior (POST), devemos utilizar o nosso middleware `body-parser` para que obtenhamos o conteúdo que foi enviado através do request.
 
-A unica diferenca entre POST e PUT e que o *PUT* é utilizado para atualizar um recurso, ja o *POST* é utilizado para criar um novo recurso.
+A única diferença entre POST e PUT e que o *PUT* é utilizado para atualizar um recurso, já o *POST* é utilizado para criar um novo recurso.
 
 ```javascript
 app.put('/user', (req, res) => {
     var user = req.body.user;
-    // faça atualize o usuario...
     res.send(`Updated user is ${user}`);
   });
+  // faça atualize o usuário...
 ```
 
 ### 3.2.5 Criando rotas DELETE
@@ -139,7 +139,7 @@ Esse e o tipo de rota para deletar uma entidade/recurso. Como mencionado anterio
 ```javascript
 app.delete('/user/:id', (req, res) => {
     var id = req.params.id;
-    // delete o usuario pelo id ...
     res.send('User deleted successfully!');
   });
+  // delete o usuário pelo id ...
 ```

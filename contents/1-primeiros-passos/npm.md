@@ -32,7 +32,7 @@ O campo **author** especifica o criador do projeto. Ele consiste em uma string o
 A **licença** é um campo extremamente importante para informar os usuários sobre como você pretende regulamentar seu projeto. Não é um campo obrigatório mas é sempre uma boa ideia falar explicitamente o que usuários podem ou não fazer.
 É muito importante se informar sobre as licenças existentes mas por agora recomendo usar a *MIT* que é uma licença permissiva utilizada tanto em software livre quanto em software proprietário.
 
-Campos como **keywords** ou **descrição** são principalmente importantes caso você planeja publicar seu projeto na npm para que outras pessoas que podem usar ou manter achem seu projeto facildade.
+Campos como **keywords** ou **descrição** são principalmente importantes caso você planeja publicar seu projeto na npm para que outras pessoas que podem usar ou manter achem seu projeto facilidade.
 
 Após preencher os campos basta digitar **YES** confirmando o conteúdo que sera seu `package.json`!
 
@@ -40,9 +40,9 @@ Após preencher os campos basta digitar **YES** confirmando o conteúdo que sera
   <a><img width="500" src="../../assets/1-primeiros-passos/npminit.png" alt="Logo"></a>
 </p>
 
-Quando começamos um projeto, a npm gera um arquivo `package.json`. Este arquivo é o centro do projeto Node.js. Ele consiste em um arquivo _JSON_, ou seja, um _Objeto Javascript_, onde a informação é salva em pares de chave-valor.
+Quando começamos um projeto, a npm gera um arquivo `package.json`. Este arquivo é o centro do projeto Node.js. Ele consiste em um arquivo _JSON_, ou seja, um _Objeto JavaScript_, onde a informação é salva em pares de chave-valor.
 
-Lembrando que as chaves devem estar em volta de aspas duplas (") e todos os campos devem estar separados com uma virgula (,).
+Lembrando que as chaves devem estar em volta de aspas duplas (") e todos os campos devem estar separados com uma vírgula (,).
 Ele guarda todas as informações de projetos com nome, versão, e diversas informações.
 
 Ainda não criamos nosso arquivo inicial do projeto chamado `index.js`.
@@ -60,7 +60,7 @@ Agora se rodarmos no nosso terminal o comando `node index.js` veremos o log `He4
 Lembrando que o `npm` acima de tudo é um gerenciador de dependências do projeto.
 E o `package.json` tem o papel de listar os pacotes e dependências do projeto.
 
-Podemos adicionar uma dependencia pelo comando:
+Podemos adicionar uma dependência pelo comando:
 
 ```bash
 npm install express
@@ -74,7 +74,7 @@ npm i express
 
 Express no caso é o framework mais comum para o desenvolvimento de API's node que nos provê todo o ferramental para desenvolver nossa aplicação.
 
-Quando estamos desenvolvendo um servidor node, muitas vezes pecisamos rodar, modificar um arquivo, parar o servidor e rodar novamente para ver as mudanças.
+Quando estamos desenvolvendo um servidor node, muitas vezes precisamos rodar, modificar um arquivo, parar o servidor e rodar novamente para ver as mudanças.
 
 Para isso vamos instalar o `nodemon`, que é uma ferramenta para podermos rodarmos o projeto com auto-reload, ou seja, o servidor node restarta assim que mexemos com o arquivo tornando nosso desenvolvimento mais produtivo.
 Pelo `nodemon` ser uma ferramenta de desenvolvimento geralmente instalamos com o `--save-dev`.
@@ -111,14 +111,14 @@ Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o 
 
 #### 3.2.1 Versionamento de pacotes
 
-As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependencias. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
+As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependências. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
 
 ```javascript
   "package": "MAJOR.MINOR.PATCH"
 ```
 
 A versão *MINOR* apenas incrementa novas funcionalidades enquanto o *PATH* fazer fixes e resolve bugs. Incrementar essas versões não devem "mudar" alguma funcionalidade já existênte.
-Uma versão *MAJOR* incrementa mudanças completamente incopatíveis com as anteriores. Se você adicionar uma dependência e usar uma função chamada "x", uma mudança nessa versão pode fazer com que a função já tenha outro nome.
+Uma versão *MAJOR* incrementa mudanças completamente incompatíveis com as anteriores. Se você adicionar uma dependência e usar uma função chamada "x", uma mudança nessa versão pode fazer com que a função já tenha outro nome.
 
 Então por exemplo, se sair uma versão 5.0 do express é bem possível que algumas das coisas que já uso dele parem de funcionar!
 
@@ -130,7 +130,7 @@ Na maioria das vezes não queremos perder bug fixes de nossas ferramentas mas n�
 }
 ```
 
-Para permitir releases PATCH e MINOR usamos o chapeu (^). Permitindo updates em qualquer versão 4.x.x
+Para permitir releases PATCH e MINOR usamos o chapéu (^). Permitindo updates em qualquer versão 4.x.x
 
 ```javascript
 "dependencies": {
