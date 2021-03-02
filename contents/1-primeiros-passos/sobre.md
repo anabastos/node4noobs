@@ -1,5 +1,4 @@
-
-## 1. História do Javascript
+# 1. História do Javascript
 
 Quando a internet começou navegadores eram apenas estáticos, ou seja, eram simples arquivos *HTML* e *CSS*. A revolução começou em 94, quando o navegador Netscape foi inventado, em que com a necessidade de fazer requisições notaram que navegadores talvez precisassem de uma linguagem.
 
@@ -19,7 +18,8 @@ Com isso além da melhora em performance e eficiência das aplicações podemos 
 O Node.js trabalha com um modelo Event-based que é basicamente detectar eventos e lidar com eles, nos capítulos posteriores vamos chegar em como podemos lidar com eventos e assincronismo com Promises.
 
 A primeira apresentação sobre o que era Node.js foi na JSConf de 2009 pelo seu criador Ryan Dahl. Um momento incrível para a história do Javascript!
-[<img src="https://img.youtube.com/vi/ztspvPYybIY/maxresdefault.jpg" width="50%">](https://youtu.be/ztspvPYybIY)
+
+[<img src="https://img.youtube.com/vi/ztspvPYybIY/hqdefault.jpg" width="50%">](https://youtu.be/ztspvPYybIY)
 
 Node.js é cross-platform, ou seja, um desenvolvedor Node pode criar aplicações desktop para Windows, Linux e Mac. Além disso não se limita a desktop, como também pode ser usado para mobile e desenvolvimento web. Se tornando então uma linguagem de uso geral, com aplicações também em cloud e soluções IoT.
 

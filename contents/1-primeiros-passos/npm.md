@@ -1,13 +1,14 @@
-## 3. Começando o projeto pela NPM
+# 3. Começando o projeto pela NPM
 
-O **NPM**(_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
+O **NPM** (_Node Package Manager_) é uma linha de comando usada para que desenvolvedores possam compartilhar e controlar seus pacotes de código JavaScript para ser usado em projetos Node.js contendo mais de 836,000 bibliotecas abertas.
 
-### 3.1 Primeiros Passos
+## 3.1 Primeiros Passos
 
 Geralmente começamos um projeto por meio da `npm`, que vem junto do Node.js já instalado.
 Podemos checar se temos o npm por meio do `npm version`.
 
 Para iniciar um projeto criamos uma pasta com o nome do projeto, entramos nela e rodamos o `npm init` para gerar nosso projeto inicial.
+
 ```bash
 mkdir node4noobs # Cria a pasta
 cd node4noobs # Entra na pasta
@@ -47,6 +48,7 @@ Ele guarda todas as informações de projetos com nome, versão, e diversas info
 
 Ainda não criamos nosso arquivo inicial do projeto chamado `index.js`.
 Portanto vamos criar esse arquivo na raiz do nosso projeto com o `console.log` que é uma forma de logarmos conteúdo no nosso console.
+
 ```javascript
 // index.js
 
@@ -55,7 +57,7 @@ console.log("He4rtDevs!!");
 
 Agora se rodarmos no nosso terminal o comando `node index.js` veremos o log `He4rtDevs!!`.
 
-### 3.2 Instalando dependências
+## 3.2 Instalando dependências
 
 Lembrando que o `npm` acima de tudo é um gerenciador de dependências do projeto.
 E o `package.json` tem o papel de listar os pacotes e dependências do projeto.
@@ -79,19 +81,19 @@ Quando estamos desenvolvendo um servidor node, muitas vezes precisamos rodar, mo
 Para isso vamos instalar o `nodemon`, que é uma ferramenta para podermos rodarmos o projeto com auto-reload, ou seja, o servidor node restarta assim que mexemos com o arquivo tornando nosso desenvolvimento mais produtivo.
 Pelo `nodemon` ser uma ferramenta de desenvolvimento geralmente instalamos com o `--save-dev`.
 
-```
+```bash
 npm install --save-dev nodemon
 ```
 
 Se checarmos nosso `package.json` vemos que agora as dependências do pacote está listadas
 
-```javascript
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+```json
+"dependencies": {
+  "express": "^4.17.1"
+},
+"devDependencies": {
+  "nodemon": "^2.0.3"
+}
 ```
 
 Como podemos remover esses pacotes se não queremos mais eles? Apenas removemos a chave-valor do `package.json`!
@@ -106,15 +108,14 @@ Todos os pacotes são salvos na pasta `node_modules`. Por ser uma pasta com arqu
 node_modules/
 ```
 
-Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando
-`npm i`
+Se quisermos atualizar ou instalar de novo a parta `node_modules` basta rodar o comando `npm i`
 
-#### 3.2.1 Versionamento de pacotes
+### 3.2.1 Versionamento de pacotes
 
 As versões dos pacotes npm seguem o que chamamos de ["Semantic Versioning (SemVer)"](https://semver.org/), que é um padrão de versionamento de software para podermos tornar mais fácil o gerenciamento de dependências. Dessa forma podemos ser específicos sobre qual versão queremos usar ou se queremos garantindo com que updates não quebrem seu projeto.
 
-```javascript
-  "package": "MAJOR.MINOR.PATCH"
+```json
+"package": "MAJOR.MINOR.PATCH"
 ```
 
 A versão *MINOR* apenas incrementa novas funcionalidades enquanto o *PATH* fazer fixes e resolve bugs. Incrementar essas versões não devem "mudar" alguma funcionalidade já existênte.
@@ -124,7 +125,7 @@ Então por exemplo, se sair uma versão 5.0 do express é bem possível que algu
 
 Na maioria das vezes não queremos perder bug fixes de nossas ferramentas mas não queremos correr o risco que o que funciona hoje, pare de funcionar amanhã. Pra isso podemos congelar um pacote em uma versão que queremos em nossas dependências usamos o tio (~). Ele permite apenas releases de PATCH nos pacotes. Permitindo updates em qualquer versão 4.14.x
 
-```javascript
+```json
 "dependencies": {
   "express": "~4.14.0"
 }
@@ -132,13 +133,13 @@ Na maioria das vezes não queremos perder bug fixes de nossas ferramentas mas n�
 
 Para permitir releases PATCH e MINOR usamos o chapéu (^). Permitindo updates em qualquer versão 4.x.x
 
-```javascript
+```json
 "dependencies": {
   "express": "^4.14.0"
 }
 ```
 
-### 3.2.3 Rodando o arquivo raiz com nodemon por meio de scripts
+## 3.2.3 Rodando o arquivo raiz com nodemon por meio de scripts
 
 Note que temos o campo `scripts` no nosso arquivo, esse scripts é um meio de automatizar tarefas repetitivas.
 
@@ -146,7 +147,8 @@ Geralmente criamos scripts para iniciar o servidor, rodar testes, ou rodar gerad
 O conteúdo de um `script` consiste em um simples comando de terminal portanto podemos automatizar o comando `node index.js` que acabamos de rodar.
 
 Após um tempo rodar o arquivo raiz do nosso projeto vai se tornar cada vez mais longo complexo dependendo da nossa configuração, para isso vamos criar o comando `start` que roda o arquivo raiz do nosso projeto chamando a dependência que acabamos de instalar , o `nodemon`.
-```
+
+```json
 ...
   "scripts": {
     "start": "nodemon index.js"
@@ -161,5 +163,3 @@ Se alterarmos o conteúdo do nosso `index.js` para `console.log('He4rtDevs!!!!!!
 <p align="center">
   <a><img width=400" src="../../assets/1-primeiros-passos/nodemon.png" alt="Logo"></a>
 </p>
-
-

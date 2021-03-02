@@ -1,4 +1,4 @@
-### 4. Módulos NPM
+# 4. Módulos NPM
 
 No capítulo anterior a título de exemplo importamos o pacote npm chamado `express`. Mas o que são pacotes?
 Pacotes são pedaços de código que estão cadastrados na npm, que quando queremos usar em nosso projeto podemos importa-los. Esse pedaço de código chamamos de módulos, e eles ficam guardado dentro da pasta `node_modules`.
@@ -19,7 +19,7 @@ Existem três tipos de módulos.
 - **Third Party Modules:** Pacotes feitos por terceiros. Você precisa adiciona-los dentro do `package.json` para que esse modulo seja baixado. Um exemplo é o `express` que exemplificamos no capitulo anterior. Para importar usa-se o nome do pacote.
 - **Core Modules:** Módulos do próprio node, como por exemplo `http`,`fs` ou `util`. Você não precisa adicionar eles no `package.json` pois eles já vem por padrão dentro do Node.js.
 
-#### 4.1 Importando pacotes de terceiros
+## 4.1 Importando pacotes de terceiros
 
 Vamos a um exemplo, abra o terminal e importe o pacote chamado `node-color-log`, que serve para que possamos dar `console.log` com cores, com o comando `npm i node-color-log`.
 
@@ -33,7 +33,7 @@ Agora em nosso index.js utilize o `import` passando o nome do pacote, `node-colo
 import logger from 'node-color-log'
 ```
 
-agora ao invés do `console.log` nativo podemos usar um log mais completo.
+Agora ao invés do `console.log` nativo podemos usar um log mais completo.
 
 ```javascript
 // index.js
@@ -50,7 +50,7 @@ Agora se rodarmos `npm run start` vemos um log muito mais completo que inclui ho
 Estamos usamos o log apenas um exemplo sobre como podemos importar pacotes npm!
 Mas nos próximos capítulos vamos usa-lo de forma mais extensa principalmente para expor possíveis erros.
 
-#### 4.2 Importando módulos locais
+## 4.2 Importando módulos locais
 
 Módulos locais são diferentes pastas ou arquivos criadas no nosso próprio projeto.
 Para isso vamos criar um modulo local que é apenas um arquivo chamado `data.js` dentro da raiz do nosso projeto.
@@ -73,7 +73,6 @@ export default { users }
 Para expor o meu objeto `users` para o resto do meu projeto node preciso usar o `export default` em frente ao users. Em que falamos que o objeto contendo os usuários serão o conteúdo exportado do arquivo.
 Usamos o `export default` para expor qualquer tipo de função, objeto ou variável de um modulo.
 
-
 Agora voltando ao meu arquivo `index.js` eu posso importar o arquivo que criamos simplesmente chamando esse novo import especificando o caminho dele dentro do projeto `./data`. O `.` denota a pasta raiz do projeto.
 
 ```javascript
@@ -91,7 +90,7 @@ Então estamos baixando o conteúdo de outro arquivo em uma variável `data`, e 
 
 Agora se vermos o terminal conseguimos passar os dados de outro arquivo para nosso index.js com sucesso!
 
-#### 4.3 Diferentes de imports e exports
+## 4.3 Diferentes de imports e exports
 
 Dentro desse mesmo arquivo `data.js` exporte uma outra variável aleatória com qualquer conteúdo.
 
@@ -162,7 +161,7 @@ const users = [example]
 export default { users }
 ```
 
-#### 4.4 Instalando dependências globais
+## 4.4 Instalando dependências globais
 
 Instalar globalmente uma dependência significa instalar um modulo não no seu projeto, mas sim no seu computador!
 

@@ -1,4 +1,3 @@
-
 ## 1. HTTP
 
 HTTP é uma sigla que quer dizer **H**yper**T**ext **T**ransfer **P**rotocol, que em português quer dizer, Protocolo de 
@@ -47,8 +46,7 @@ fica encarregada de processar a solicitação. Resumidamente, podemos dizer que 
 ## Errors codes
 
 ### GET
-O método GET explicita que queremos "pegar" algum tipo de informação do servidor. Esse método não tem intenção de modificar qualquer dado existente no servidor.
-Por exemplo, uma requisição **GET** no `endpoint` de `"users"` deve retornar os dados dos usuários.
+O método GET explicita que queremos "pegar" algum tipo de informação do servidor. Esse método não tem intenção de modificar qualquer dado existente no servidor. Por exemplo, uma requisição **GET** no `endpoint` de `"users"` deve retornar os dados dos usuários.
 
 **Exemplos de requisições e suas respostas**
 Requisição | Resposta
@@ -65,4 +63,3 @@ code 201 ?
 Requisição | Resposta
 --- | ---
 **HTTP POST www.server.com/users ** | `{}`
-
