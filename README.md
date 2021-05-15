@@ -21,7 +21,8 @@
 </p>
 
 ## Introdução
-O tutorial do Node4noobs tem o objetivo de ensinar sobre o funcionamento do ecossistema Node.js e trabalhar na criação de um projeto passo-a-passo do zero até a estrutura de uma API madura com autenticação e testes automatizados fazendo uso das ferramentas mais atuais.
+O tutorial do Node4noobs tem o objetivo de ensinar sobre o funcionamento do ecossistema Node.js e trabalhar na criação de um projeto passo-a-passo do zero até a estrutura de uma API madura com autenticação e testes automatizados fazendo uso das ferramentas mais atuais além de aprofundarmos nas funcionalides core do Node.js fazendo uma aplicação de linha de comando.
+
 O intuito é que pessoas com pouca experiência possam ter conceito o suficiente para se sentirem confiantes fazendo aplicações back-end production-ready.
 
 ### Pré requisitos
@@ -31,41 +32,60 @@ Entendimento básico de linha de comando e javascript. Você pode ver outros 4no
 Node.js não é uma linguagem ou um framework mas sim é um ecossistema cross-platform para rodar Javascript gratuito e open source.
 Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em navegadores como também para fazer Javascript server-side, mas atualmente é uma ferramenta essencial full-stack, ou seja, é usado para desenvolver aplicações front-end e back-end.
 
-## Conteúdos
-1. Primeiros passos
-    - [Sobre o node](./contents/1-primeiros-passos/sobre.md)
-    - [Instalação](./contents/1-primeiros-passos/instalacao.md)
-    - [NPM](./contents/1-primeiros-passos/npm.md)
-    - [Módulos](./contents/1-primeiros-passos/modulos.md)
-    - [Configurações iniciais](./contents/1-primeiros-passos/config.md)
-2. Arquitetura Básica
-    - [Básicos HTTP](./contents/2-arquitetura-basica/http.md)
-    - [Express](./contents/2-arquitetura-basica/express.md)
-    - [Rotas](./contents/2-arquitetura-basica/rotas.md)
-    - [Config](./contents/2-arquitetura-basica/config.md)
-    - [Middlewares](./contents/2-arquitetura-basica/middlewares.md)
-    - [Controllers](./contents/3-database/mongoose.md)
-    - [Services]()
-3. Database
+1. Primeiros passos 
+    - [Sobre o node](./contents/primeiros-passos/sobre.md)
+    - [Instalação](./contents/primeiros-passos/instalacao.md)
+    - [NPM](./contents/primeiros-passos/npm.md)
+    - [Módulos](./contents/primeiros-passos/modulos.md)
+    - [Configurações iniciais](./contents/primeiros-passos/config.md)
+
+2. Projeto de Linha de comando
+  - [Setup]()
+  - [File system Buffer Streams]()
+  - [Path]()
+  - [OS]()
+
+3. Assincronismo
+  - [Event loop]()
+  - [Operações bloqueantes]()
+  - [Callbacks]()
+  - [Promises]()
+  - [Lidando com promises]()
+  - [Event-driven]()
+
+4. Projeto de API
+4.1. Arquitetura API
+    - [Básicos HTTP](./contents/api/arquitetura/http.md)
+    - [Express](./contents/api/arquitetura/express.md)
+    - [Rotas](./contents/api/arquitetura/rotas.md)
+    - [Config](./contents/api/arquitetura/config.md)
+    - [Middlewares](./contents/api/arquitetura/middlewares.md)
+    - [Controllers](./contents/api/database/mongoose.md)
+4.2. Database
     - [Mongoose]()
     - [Models]()
-4. Testing
-    - [Jest]()
-5. Auth
+    - [Prisma]()
+4.3. Testing
+    - [Unit testing]()
+    - [Integration testing]()
+4.4. Auth
     - [JWT]()
     - [Password middleware]()
     - [Login]()
     - [Guards]()
-6. Assincronismo
-    - [Event loop]()
-    - [Operações bloqueantes]()
-    - [Callbacks]()
-    - [Promises]()
-    - [Lidando com promises]()
-    - [Event-driven]()
-7. Mais
-    - [Node.js via docker](./contents/7-mais/docker.md)
-    - [File system]()
+    - [Services]()
+4.5. Melhorando a experiência
+  - [Swagger]()
+  - [Hooks]()
+  - [Typescript]()
+  - [Prisma]()
+  - [NestJS]()
+
+5. Advanced Node / Tools
+    - [Scaling]()
+    - [Node.js via docker](./contents/more/docker.md)
+    - [Console](./contents/more/console.md)
+    - [NPX](./contents/more/npx.md)
 
 ## Quero contribuir
 
