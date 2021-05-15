@@ -1,3 +1,4 @@
+
 ## API
 
 Trazendo um pouco para o nosso objetivo, ao construir nossa aplicação em Node, estaremos transferindo nossos dados pelo protocolo HTTP, porém só isso não é o suficiente. Muitas vezes as nossas aplicações vão ter operações muito complexas ou específicas que não é de responsabilidade

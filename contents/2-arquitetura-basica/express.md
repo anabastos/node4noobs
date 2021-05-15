@@ -62,3 +62,5 @@ Para executar a aplicação rode o comando que definimos nos passos anteriores p
 Temos uma mensagem `Hello World!` e um servidor funcionando! 
 
 Note que ao tentarmos usar outro caminho no URL como [http://localhost:3000/batata](http://localhost:3000/batata) recebemos uma mensagem `404 Not Found`.
+
+## 2.2 

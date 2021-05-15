@@ -96,6 +96,10 @@ Se checarmos nosso `package.json` vemos que agora as dependências do pacote est
 }
 ```
 
+As dependencias de em `devDependencies` são de pacotes que não precisamos em produção.
+Um exemplo seria ferramentas de teste ou que nos ajude a rodar a plicação.
+Portanto se rodarmos `npm install --production` em alguma maquina, ele vai ignorar completamente as `devDependencies`.
+
 Como podemos remover esses pacotes se não queremos mais eles? Apenas removemos a chave-valor do `package.json`!
 Só tome cuidado para tirar todas as referências dentro do código dessas dependências.
 
