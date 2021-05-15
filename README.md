@@ -54,32 +54,32 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
   - [Event-driven]()
 
 4. Projeto de API
-4.1. Arquitetura API
-    - [Básicos HTTP](./contents/api/arquitetura/http.md)
-    - [Express](./contents/api/arquitetura/express.md)
-    - [Rotas](./contents/api/arquitetura/rotas.md)
-    - [Config](./contents/api/arquitetura/config.md)
-    - [Middlewares](./contents/api/arquitetura/middlewares.md)
-    - [Controllers](./contents/api/database/mongoose.md)
-4.2. Database
-    - [Mongoose]()
-    - [Models]()
-    - [Prisma]()
-4.3. Testing
-    - [Unit testing]()
-    - [Integration testing]()
-4.4. Auth
-    - [JWT]()
-    - [Password middleware]()
-    - [Login]()
-    - [Guards]()
-    - [Services]()
-4.5. Melhorando a experiência
-  - [Swagger]()
-  - [Hooks]()
-  - [Typescript]()
-  - [Prisma]()
-  - [NestJS]()
+  - 4.1. Arquitetura API
+      - [Básicos HTTP](./contents/api/arquitetura/http.md)
+      - [Express](./contents/api/arquitetura/express.md)
+      - [Rotas](./contents/api/arquitetura/rotas.md)
+      - [Config](./contents/api/arquitetura/config.md)
+      - [Middlewares](./contents/api/arquitetura/middlewares.md)
+      - [Controllers](./contents/api/database/mongoose.md)
+  - 4.2. Database
+      - [Mongoose]()
+      - [Models]()
+      - [Prisma]()
+  - 4.3. Testing
+      - [Unit testing]()
+      - [Integration testing]()
+  - 4.4. Auth
+      - [JWT]()
+      - [Password middleware]()
+      - [Login]()
+      - [Guards]()
+      - [Services]()
+  - 4.5. Melhorando a experiência
+      - [Swagger]()
+      - [Hooks]()
+      - [Typescript]()
+      - [Prisma]()
+      - [NestJS]()
 
 5. Advanced Node / Tools
     - [Scaling]()
