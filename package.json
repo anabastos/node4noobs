@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/anabastos/node4noobs#readme",
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.21.2",
     "node-color-log": "^5.1.0"
   },
   "devDependencies": {
