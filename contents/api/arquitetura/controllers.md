@@ -39,7 +39,7 @@ router.route('/usuario')
   .put(usuarioController.updateUser)
   .delete(usuarioController.deleteUser);
 
-router.route('/usuario/:id)
+router.route('/usuario/:id')
   .get(usuarioController.getUser)
 ```
 

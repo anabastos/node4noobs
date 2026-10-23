@@ -60,7 +60,7 @@ Ele possíbilitou que o Javascript pudesse ser usado não apenas para rodar em n
       - [Rotas](./contents/api/arquitetura/rotas.md)
       - [Config](./contents/api/arquitetura/config.md)
       - [Middlewares](./contents/api/arquitetura/middlewares.md)
-      - [Controllers](./contents/api/database/mongoose.md)
+      - [Controllers](./contents/api/arquitetura/controllers.md)
   - 4.2. Database
       - [Mongoose]()
       - [Models]()
